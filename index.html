@@ -43,12 +43,15 @@
             text-align: left;
         }
 
+        /* [수정됨] 프로필 이미지 스타일: 원형 -> 직사각형 */
         .profile-img {
             width: 100%;
             max-width: 220px;
-            height: 220px;
+            /* height: 220px;  <- 삭제함 (강제 정사각형 해제) */
+            height: auto;   /* <- 추가함 (사진의 원래 비율 유지) */
             object-fit: cover;
-            border-radius: 50%;
+            /* border-radius: 50%; <- 삭제함 (원형 해제) */
+            border-radius: 12px; /* <- 추가함 (모서리가 살짝 둥근 직사각형) */
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             /* 사진 배경색도 톤에 맞춰서 따뜻한 회색으로 변경 */
