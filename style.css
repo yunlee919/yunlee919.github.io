@@ -1,0 +1,169 @@
+/* [1. 기본 설정: 폰트 및 전체 레이아웃] */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 링크 스타일 (학교, 회사 이름 등에 적용) */
+a {
+    color: #0066cc; /* 학술적인 파란색 */
+    text-decoration: none; /* 평소에는 밑줄 없음 */
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+a:hover {
+    color: #003399; /* 마우스 올리면 진해짐 */
+    text-decoration: underline; /* 마우스 올리면 밑줄 */
+}
+
+/* [2. 메인 컨테이너: 화면 중앙 정렬 및 좌우 배치] */
+.container {
+    max-width: 960px; /* 전체 너비 제한 */
+    margin: 0 auto;   /* 중앙 정렬 */
+    padding: 40px 20px;
+    display: flex;    /* Flexbox: 좌우 배치 핵심 */
+    gap: 50px;        /* 왼쪽 프로필과 오른쪽 본문 사이 간격 */
+}
+
+/* [3. 왼쪽 프로필 섹션] */
+.profile-section {
+    flex: 0 0 250px; /* 너비 250px로 고정 */
+    text-align: left;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 220px;
+    height: 220px; /* 정사각형 비율 유지 */
+    object-fit: cover; /* 이미지가 찌그러지지 않게 자름 */
+    border-radius: 50%; /* 원형 */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: #f0f0f0;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.affiliation {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 프로필 하단 연락처 링크들 */
+.contact-links a {
+    display: block; /* 한 줄에 하나씩 배치 */
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* [4. 오른쪽 메인 콘텐츠 섹션] */
+.main-content {
+    flex: 1; /* 남은 공간 모두 차지 */
+}
+
+section {
+    margin-bottom: 50px; /* 각 섹션(About, News 등) 간격 */
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f0f0f0; /* 제목 아래 회색 줄 */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+/* About Me 본문 스타일 */
+.about-text {
+    margin-bottom: 15px;
+}
+
+/* [5. 뉴스 리스트 스타일] */
+.news-list {
+    list-style: none; /* 점 없애기 */
+    padding: 0;
+}
+
+.news-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.news-date {
+    font-weight: bold;
+    color: #444;
+    margin-right: 10px;
+    font-family: monospace; /* 날짜는 고정폭 글꼴 */
+}
+
+/* [6. 경력(Experience) 아이템 스타일] */
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.experience-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.experience-meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+    font-style: italic; /* 이탤릭체 */
+}
+
+.experience-desc {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+/* 기술 스택 태그 (LLM, Python 등) 스타일 */
+.tech-tag {
+    display: inline-block;
+    background-color: #f0f4f8; /* 연한 파란 회색 배경 */
+    color: #334455;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* [7. 모바일 반응형 (화면이 좁을 때)] */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 위아래로 배치 변경 */
+        gap: 30px;
+    }
+
+    .profile-section {
+        text-align: center; /* 모바일에서는 가운데 정렬 */
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+    }
+    
+    .profile-img {
+        margin: 0 auto 20px auto; /* 이미지 가운데 정렬 */
+    }
+
+    .contact-links a {
+        display: inline-block; /* 모바일에서는 가로로 나열 */
+        margin: 0 10px;
+        padding: 5px;
+    }
+}

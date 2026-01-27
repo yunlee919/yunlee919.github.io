@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yunwoo Lee | Academic Homepage</title>
+    <style>
+        /* [1. 기본 설정: 폰트 및 전체 레이아웃] */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 링크 스타일 */
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.2s, text-decoration 0.2s;
+        }
+
+        a:hover {
+            color: #003399;
+            text-decoration: underline;
+        }
+
+        /* [2. 메인 컨테이너] */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            gap: 50px;
+        }
+
+        /* [3. 왼쪽 프로필 섹션] */
+        .profile-section {
+            flex: 0 0 250px;
+            text-align: left;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background-color: #f0f0f0;
+        }
+
+        .name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #111;
+        }
+
+        .affiliation {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-links a {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* [4. 오른쪽 메인 콘텐츠 섹션] */
+        .main-content {
+            flex: 1;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        /* About Me 스타일 */
+        .about-text {
+            margin-bottom: 15px;
+        }
+
+        /* 뉴스 리스트 스타일 */
+        .news-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .news-list li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .news-date {
+            font-weight: bold;
+            color: #444;
+            margin-right: 10px;
+            font-family: monospace;
+        }
+
+        /* 경력/연구 아이템 스타일 */
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .experience-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 4px;
+        }
+
+        .experience-meta {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .experience-desc {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        /* 기술 태그 스타일 */
+        .tech-tag {
+            display: inline-block;
+            background-color: #f0f4f8;
+            color: #334455;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        /* [5. 모바일 반응형] */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .profile-section {
+                text-align: center;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 20px;
+            }
+            
+            .profile-img {
+                margin: 0 auto 20px auto;
+            }
+
+            .contact-links a {
+                display: inline-block;
+                margin: 0 10px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <aside class="profile-section">
+            <img src="assets/profile.jpg" alt="Yunwoo Lee" class="profile-img">
+            
+            <div class="name">Yunwoo Lee</div>
+            <div class="affiliation">
+                M.S. Student in CL<br>
+                University of Washington<br>
+                Seattle, WA
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:yunu919@uw.edu">yunu919@uw.edu</a>
+                <a href="https://www.linkedin.com/in/yunu919/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yunlee919" target="_blank">GitHub</a>
+                <a href="https://github.com/yunlee919/YWL/blob/main/YunwooLee_CV/YunwooLee_CV.pdf" target="_blank">Curriculum Vitae (PDF)</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <section id="about">
+                <h2>About Me</h2>
+                <p class="about-text">
+                    I am a Master's student in <strong>Computational Linguistics</strong> at the 
+                    <a href="https://www.washington.edu/" target="_blank">University of Washington</a>. 
+                    My research interests lie in the trustworthiness of Large Language Models (LLMs), specifically focusing on <strong>hallucination, groundedness, and socio-cultural bias</strong>.
+                </p>
+                <p class="about-text">
+                    Previously, I worked as a Researcher at 
+                    <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank">KETI</a> (Korea Electronics Technology Institute) and 
+                    <a href="https://nc-ai.com/en" target="_blank">NCSOFT</a>, where I led AI Red Teaming initiatives and developed benchmarks for Korean LLMs.
+                    I hold a B.A. in Linguistics & Cognitive Science and a B.S. in Language Science in AI from 
+                    <a href="https://www.hufs.ac.kr/hufs/index.do" target="_blank">HUFS</a>.
+                </p>
+            </section>
+
+            <section id="news">
+                <h2>News</h2>
+                <ul class="news-list">
+                    <li><span class="news-date">Sep 2025</span> Started M.S. in Computational Linguistics at <strong>University of Washington</strong>.</li>
+                    <li><span class="news-date">2025</span> Awarded <strong>UW CLMS Scholarship</strong> ($14,500).</li>
+                    <li><span class="news-date">Sep 2024</span> Joined <strong>KETI</strong> as a Researcher in the Language Team.</li>
+                    <li><span class="news-date">Mar 2024</span> Joined <strong>NCSOFT</strong> as a Language AI Researcher.</li>
+                </ul>
+            </section>
+
+            <section id="work">
+                <h2>Work Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">
+                        Trustworthiness Benchmarks for Korean LLMs
+                    </div>
+                    <div class="experience-meta">
+                        Researcher @ <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank">KETI</a> | Sep 2024 - Jun 2025
+                    </div>
+                    <div class="experience-desc">
+                        Developed benchmarks to evaluate hallucination, reliability, and socio-cultural bias in Korean LLMs. 
+                        Designed prompts and failure-mode analysis rubrics to assess model groundedness.
+                    </div>
+                    <div>
+                        <span class="tech-tag">LLM Evaluation</span>
+                        <span class="tech-tag">Trustworthiness</span>
+                        <span class="tech-tag">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">
+                        AI Red Teaming & Safety Protocols
+                    </div>
+                    <div class="experience-meta">
+                        Language AI Researcher @ <a href="https://nc-ai.com/en" target="_blank">NCSOFT</a> | Mar 2024 - Sep 2024
+                    </div>
+                    <div class="experience-desc">
+                        Led AI Red Team initiatives to identify ethical and safety risks in language models. 
+                        Created robust testing protocols and diverse conversational datasets to mitigate potential harms.
+                    </div>
+                    <div>
+                        <span class="tech-tag">AI Safety</span>
+                        <span class="tech-tag">Red Teaming</span>
+                        <span class="tech-tag">Ethics</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">
+                        Persona-based Chatbot "Haru"
+                    </div>
+                    <div class="experience-meta">
+                        Linguistic Annotator @ <a href="https://www.sktelecom.com/index_en.html" target="_blank">SK Telecom</a> | Feb 2023 - Jun 2023
+                    </div>
+                    <div class="experience-desc">
+                        Contributed to developing "Haru," a persona-based chatbot. 
+                        Implemented preprocessing pipelines for informal language handling, achieving top user entrance rates.
+                    </div>
+                    <div>
+                        <span class="tech-tag">Chatbot</span>
+                        <span class="tech-tag">Data Annotation</span>
+                        <span class="tech-tag">NLP Pipeline</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="research">
+                <h2>Research Experience</h2>
+
+                <div class="experience-item">
+                    <div class="experience-title">
+                        Corpus Study for Sentiment Analysis & Chatbot NLU
+                    </div>
+                    <div class="experience-meta">
+                        Undergraduate Research Intern @ <a href="http://dicora.kr/" target="_blank">DICORA Lab, HUFS</a> | Jan 2022 - Sep 2022
+                    </div>
+                    <div class="experience-desc">
+                        Participated in two research projects: (1) constructing language data for financial sentiment analysis of stock articles, and (2) generating chatbot NLU datasets for AI model training.
+                    </div>
+                    <div>
+                        <span class="tech-tag">Corpus Linguistics</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                        <span class="tech-tag">Data Construction</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
