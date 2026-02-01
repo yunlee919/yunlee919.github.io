@@ -162,7 +162,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* ====== [NEW] Education logo row layout ====== */
+/* ====== Education logo row layout ====== */
 .edu-item {
     display: flex;
     gap: 18px;
@@ -174,6 +174,9 @@ h2 {
     flex: 0 0 auto;
     line-height: 0; /* 이미지 아래 여백 방지 */
     text-decoration: none;
+
+    /* [추가] 로고 프레임 느낌을 부드럽게 */
+    border-radius: 10px;
 }
 
 .edu-logo {
@@ -181,14 +184,29 @@ h2 {
     height: 70px;
     object-fit: contain;
     border-radius: 10px;
-    background: #ffffff;
-    border: 1px solid #e0ded5;
+
+    /* [수정] 흰색 박스 → 사이트 배경 톤으로 */
+    background: #fbf7f0;
+
+    /* [수정] 테두리 톤 다운 */
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    /* [추가] 약한 그림자로 경계만 은은하게 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
     padding: 6px;
 }
 
 .edu-content {
     flex: 1;
     min-width: 0;
+}
+
+/* [추가] Education bullet을 제목 시작점과 세로 정렬 */
+.edu-content ul {
+    margin: 8px 0 0 0;         /* 왼쪽 margin 제거 */
+    padding-left: 0;           /* 기본 들여쓰기 제거 */
+    list-style-position: inside; /* bullet(•) 시작점을 텍스트 시작점으로 */
 }
 
 .edu-school-link {
