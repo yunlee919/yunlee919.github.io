@@ -173,7 +173,7 @@
             text-decoration: underline;
         }
 
-        /* ====== [NEW] Education logo row layout ====== */
+        /* ====== Education logo row layout ====== */
         .edu-item {
             display: flex;
             gap: 18px;
@@ -185,15 +185,25 @@
             flex: 0 0 auto;
             line-height: 0; /* 이미지 아래 여백 방지 */
             text-decoration: none;
+            border-radius: 10px;
         }
 
+        /* [수정 2] 로고 틀을 배경색 톤에 맞추고, 대비를 부드럽게 */
         .edu-logo {
             width: 70px;
             height: 70px;
             object-fit: contain;
             border-radius: 10px;
-            background: #ffffff;
-            border: 1px solid #e0ded5;
+
+            /* 기존: 흰색 배경(#fff) → 사이트 배경과 같은 톤 */
+            background: #fbf7f0;
+
+            /* 기존: 선명한 테두리 → 더 은은한 테두리 */
+            border: 1px solid rgba(0,0,0,0.06);
+
+            /* 은은한 깊이감 */
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+
             padding: 6px;
         }
 
@@ -215,6 +225,13 @@
         .edu-years {
             font-weight: 400;
             color: #555;
+        }
+
+        /* [수정 1] Education bullet을 학교 이름 첫 글자 시작점과 세로 정렬 */
+        .edu-content ul {
+            margin: 8px 0 0 0;          /* 왼쪽 margin 제거 */
+            padding-left: 0;            /* 기본 들여쓰기 제거 */
+            list-style-position: inside; /* bullet(•)을 텍스트 시작점으로 */
         }
 
         /* [7. 모바일 반응형] */
@@ -304,7 +321,7 @@
                 </ul>
             </section>
 
-            <!-- Education (updated: logo + clickable link + bundled layout) -->
+            <!-- Education -->
             <section id="education">
                 <h2>Education</h2>
 
@@ -321,7 +338,8 @@
                             </a>
                             <span class="edu-years">| 2025–Present</span>
                         </div>
-                        <ul style="margin: 8px 0 0 18px;">
+                        <!-- [수정 1 적용] 인라인 margin 제거 -->
+                        <ul>
                             <li>Master of Science in Computational Linguistics</li>
                         </ul>
                     </div>
@@ -340,7 +358,8 @@
                             </a>
                             <span class="edu-years">| 2018–2024</span>
                         </div>
-                        <ul style="margin: 8px 0 0 18px;">
+                        <!-- [수정 1 적용] 인라인 margin 제거 -->
+                        <ul>
                             <li>Bachelor of Arts in Linguistics &amp; Cognitive Science</li>
                             <li>Bachelor of Language Science in Artificial Intelligence (Double Major)</li>
                             <li>Leave of Absence — Military Service (Feb 2019 – Sep 2020)</li>
@@ -349,7 +368,7 @@
                 </div>
             </section>
 
-            <!-- 이하 섹션들은 그대로 (생략 없이 유지) -->
+            <!-- 이하 섹션들은 그대로 -->
             <section id="work">
                 <h2>Work Experience</h2>
                 
