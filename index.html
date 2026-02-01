@@ -6,7 +6,6 @@
     <title>Yunwoo Lee | Academic Homepage</title>
     
     <link rel="icon" type="image/png" href="assets/favicon.png">
-
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     
     <style>
@@ -174,6 +173,50 @@
             text-decoration: underline;
         }
 
+        /* ====== [NEW] Education logo row layout ====== */
+        .edu-item {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .edu-logo-link {
+            display: inline-flex;
+            flex: 0 0 auto;
+            line-height: 0; /* 이미지 아래 여백 방지 */
+            text-decoration: none;
+        }
+
+        .edu-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            border-radius: 10px;
+            background: #ffffff;
+            border: 1px solid #e0ded5;
+            padding: 6px;
+        }
+
+        .edu-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .edu-school-link {
+            color: #111;          /* 제목은 검정 톤 */
+            text-decoration: none;
+        }
+
+        .edu-school-link:hover {
+            color: #003399;
+            text-decoration: underline;
+        }
+
+        .edu-years {
+            font-weight: 400;
+            color: #555;
+        }
+
         /* [7. 모바일 반응형] */
         @media (max-width: 768px) {
             .container {
@@ -195,6 +238,12 @@
                 display: inline-block;
                 margin: 0 10px;
                 padding: 5px;
+            }
+
+            /* Education: 모바일에서 로고 크기 살짝 줄이기 */
+            .edu-logo {
+                width: 62px;
+                height: 62px;
             }
         }
     </style>
@@ -255,31 +304,52 @@
                 </ul>
             </section>
 
-            <!-- Education (inserted directly under News) -->
+            <!-- Education (updated: logo + clickable link + bundled layout) -->
             <section id="education">
                 <h2>Education</h2>
 
-                <div class="experience-item">
-                    <div class="experience-title">
-                        University of Washington <span style="font-weight: 400; color:#555;">| 2025–Present</span>
+                <!-- UW -->
+                <div class="experience-item edu-item">
+                    <a class="edu-logo-link" href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/uw.png" alt="University of Washington logo" class="edu-logo">
+                    </a>
+
+                    <div class="edu-content">
+                        <div class="experience-title">
+                            <a class="edu-school-link" href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
+                                University of Washington
+                            </a>
+                            <span class="edu-years">| 2025–Present</span>
+                        </div>
+                        <ul style="margin: 8px 0 0 18px;">
+                            <li>Master of Science in Computational Linguistics</li>
+                        </ul>
                     </div>
-                    <ul style="margin: 8px 0 0 18px;">
-                        <li>Master of Science in Computational Linguistics</li>
-                    </ul>
                 </div>
 
-                <div class="experience-item">
-                    <div class="experience-title">
-                        Hankuk University of Foreign Studies <span style="font-weight: 400; color:#555;">| 2018–2024</span>
+                <!-- HUFS -->
+                <div class="experience-item edu-item">
+                    <a class="edu-logo-link" href="https://www.hufs.ac.kr/hufs/index.do" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/hufs.png" alt="Hankuk University of Foreign Studies logo" class="edu-logo">
+                    </a>
+
+                    <div class="edu-content">
+                        <div class="experience-title">
+                            <a class="edu-school-link" href="https://www.hufs.ac.kr/hufs/index.do" target="_blank" rel="noopener noreferrer">
+                                Hankuk University of Foreign Studies
+                            </a>
+                            <span class="edu-years">| 2018–2024</span>
+                        </div>
+                        <ul style="margin: 8px 0 0 18px;">
+                            <li>Bachelor of Arts in Linguistics &amp; Cognitive Science</li>
+                            <li>Bachelor of Language Science in Artificial Intelligence (Double Major)</li>
+                            <li>Leave of Absence — Military Service (Feb 2019 – Sep 2020)</li>
+                        </ul>
                     </div>
-                    <ul style="margin: 8px 0 0 18px;">
-                        <li>Bachelor of Arts in Linguistics &amp; Cognitive Science</li>
-                        <li>Bachelor of Language Science in Artificial Intelligence (Double Major)</li>
-                        <li>Leave of Absence — Military Service (Feb 2019 – Sep 2020)</li>
-                    </ul>
                 </div>
             </section>
 
+            <!-- 이하 섹션들은 그대로 (생략 없이 유지) -->
             <section id="work">
                 <h2>Work Experience</h2>
                 

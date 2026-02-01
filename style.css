@@ -1,14 +1,12 @@
 /* [1. 기본 설정: 폰트 및 전체 레이아웃] */
 body {
-    /* [수정] Lato 폰트 적용 */
     font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    /* [수정] 배경색: 베이지(#fbf7f0)로 변경 */
     background-color: #fbf7f0;
     color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    font-size: 15px; /* Lato 폰트에 맞춰 가독성 조정 */
+    font-size: 15px;
 }
 
 /* 링크 스타일 */
@@ -38,16 +36,16 @@ a:hover {
     text-align: left;
 }
 
-/* [수정] 프로필 이미지: 직사각형으로 변경 */
+/* 프로필 이미지 */
 .profile-img {
     width: 100%;
     max-width: 220px;
-    height: auto; /* [수정] 원본 비율 유지 (정사각형 강제 해제) */
+    height: auto;
     object-fit: cover;
-    border-radius: 12px; /* [수정] 원형(50%) -> 둥근 직사각형(12px) */
+    border-radius: 12px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    background-color: #e8e4dc; /* 사진 로딩 전 배경색도 톤 다운 */
+    background-color: #e8e4dc;
 }
 
 .name {
@@ -80,7 +78,6 @@ section {
 
 h2 {
     font-size: 1.5rem;
-    /* [수정] 구분선 색상을 베이지 배경에 맞춰 조정 */
     border-bottom: 2px solid #e0ded5;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -108,8 +105,6 @@ h2 {
     font-weight: bold;
     color: #444;
     margin-right: 10px;
-    /* Lato 폰트와 어울리도록 고정폭 글꼴 해제 (원하면 다시 추가 가능) */
-    /* font-family: monospace; */
 }
 
 /* [6. 경력 아이템 스타일] */
@@ -119,7 +114,7 @@ h2 {
 
 .experience-title {
     font-size: 1.1rem;
-    font-weight: 700; /* 제목 강조 */
+    font-weight: 700;
     color: #111;
     margin-bottom: 4px;
 }
@@ -137,11 +132,11 @@ h2 {
     margin-bottom: 8px;
 }
 
-/* [수정] 기술 태그: 흰색 배경 박스로 변경 */
+/* 기술 태그 스타일 */
 .tech-tag {
     display: inline-block;
-    background-color: #ffffff; /* [수정] 베이지 위에서 잘 보이게 흰색 */
-    border: 1px solid #e0ded5; /* [수정] 테두리 추가 */
+    background-color: #ffffff;
+    border: 1px solid #e0ded5;
     color: #555;
     font-size: 0.8rem;
     padding: 3px 8px;
@@ -149,6 +144,66 @@ h2 {
     margin-right: 5px;
     margin-top: 5px;
     font-weight: 400;
+}
+
+/* Read more / less button */
+.toggle-more {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 6px;
+    color: #0066cc;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.toggle-more:hover {
+    color: #003399;
+    text-decoration: underline;
+}
+
+/* ====== [NEW] Education logo row layout ====== */
+.edu-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.edu-logo-link {
+    display: inline-flex;
+    flex: 0 0 auto;
+    line-height: 0; /* 이미지 아래 여백 방지 */
+    text-decoration: none;
+}
+
+.edu-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #e0ded5;
+    padding: 6px;
+}
+
+.edu-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.edu-school-link {
+    color: #111; /* 제목 링크는 검정 */
+    text-decoration: none;
+}
+
+.edu-school-link:hover {
+    color: #003399;
+    text-decoration: underline;
+}
+
+.edu-years {
+    font-weight: 400;
+    color: #555;
 }
 
 /* [7. 모바일 반응형] */
@@ -172,5 +227,10 @@ h2 {
         display: inline-block;
         margin: 0 10px;
         padding: 5px;
+    }
+
+    .edu-logo {
+        width: 62px;
+        height: 62px;
     }
 }
