@@ -216,10 +216,8 @@
                     <a href="https://www.washington.edu/" target="_blank">University of Washington</a> in Seattle. 
                     I’m broadly interested in computational linguistics and NLP, especially in how linguistic structure and meaning can be modeled and used to build better language technologies.
                 </p>
-                </p>
                 <p class="about-text">
                     More recently, I’ve become particularly interested in trustworthy LLMs: how we can evaluate and improve models’ reliability in real-world settings, with a focus on hallucination, fairness, and socio-cultural bias.
-
                 </p>
                 <p class="about-text">
                     I previously worked at 
@@ -254,13 +252,24 @@
                         Researcher @ <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank">KETI</a> | Sep 2024 - Jun 2025
                     </div>
                     <div class="experience-desc">
-                        Developed benchmarks to evaluate hallucination, reliability, and socio-cultural bias in Korean LLMs. 
-                        Designed prompts and failure-mode analysis rubrics to assess model groundedness.
+                        <p>
+                            I worked on building evaluation resources for Korean LLMs with an emphasis on linguistically grounded reliability:
+                            how models maintain grounded claims, interpret indirect meaning, and respond appropriately under pragmatic pressure.
+                            Rather than scoring only “correct/incorrect,” I focused on identifying discourse-level failure patterns and the linguistic triggers behind them.
+                        </p>
+                        <ul style="margin: 8px 0 0 18px;">
+                            <li>Designed prompt suites and rubric-based evaluations for groundedness/hallucination, with failure-mode categories tied to discourse phenomena (e.g., attribution, consistency, hedging).</li>
+                            <li>Developed annotation guidelines to assess socio-cultural bias and pragmatic harm, emphasizing appropriateness in Korean register and stance.</li>
+                            <li>Validated a Korean multimodal dialogue dataset by aligning utterance-level pragmatic functions (e.g., agreement, refusal, hesitation) with nonverbal cue labels.</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <em>Key insight:</em> many reliability issues are not isolated “wrong facts,” but emerge from how meaning is constructed across turns (implicature, underspecification, and discourse coherence).
+                        </p>
                     </div>
                     <div>
-                        <span class="tech-tag">LLM Evaluation</span>
-                        <span class="tech-tag">Trustworthiness</span>
-                        <span class="tech-tag">Prompt Engineering</span>
+                        <span class="tech-tag">Discourse Evaluation</span>
+                        <span class="tech-tag">Pragmatics</span>
+                        <span class="tech-tag">Failure-Mode Analysis</span>
                     </div>
                 </div>
 
@@ -272,13 +281,23 @@
                         Language AI Researcher @ <a href="https://nc-ai.com/en" target="_blank">NCSOFT</a> | Mar 2024 - Sep 2024
                     </div>
                     <div class="experience-desc">
-                        Led AI Red Team initiatives to identify ethical and safety risks in language models. 
-                        Created robust testing protocols and diverse conversational datasets to mitigate potential harms.
+                        <p>
+                            I supported safety-focused evaluation for conversational AI by building test cases that treat risk as a linguistic and interactional phenomenon.
+                            In addition to single-turn risk detection, I evaluated context-aware harmfulness in multi-turn settings where intent becomes clearer through discourse trajectories.
+                        </p>
+                        <ul style="margin: 8px 0 0 18px;">
+                            <li>Created semantics-informed risk probes for single-turn inputs, including cases where meaning depends on polysemy or indirect phrasing.</li>
+                            <li>Developed multi-turn scenarios to capture escalation patterns (justification → concretization → actionable request) and measured how risk accumulates over dialogue context.</li>
+                            <li>Analyzed evasion behaviors after refusals (repair/paraphrase, euphemisms), and incorporated these patterns into testing protocols.</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <em>Key insight:</em> risk is often discourse-driven—what looks harmless in isolation can become unsafe when reference resolution, implicature, and turn-by-turn intent shifts are taken into account.
+                        </p>
                     </div>
                     <div>
-                        <span class="tech-tag">AI Safety</span>
-                        <span class="tech-tag">Red Teaming</span>
-                        <span class="tech-tag">Ethics</span>
+                        <span class="tech-tag">Semantic Risk Signals</span>
+                        <span class="tech-tag">Context-Aware Safety</span>
+                        <span class="tech-tag">Conversation Analysis</span>
                     </div>
                 </div>
 
@@ -290,13 +309,23 @@
                         Linguistic Annotator @ <a href="https://www.sktelecom.com/index_en.html" target="_blank">SK Telecom</a> | Feb 2023 - Jun 2023
                     </div>
                     <div class="experience-desc">
-                        Contributed to developing "Haru," a persona-based chatbot. 
-                        Implemented preprocessing pipelines for informal language handling, achieving top user entrance rates.
+                        <p>
+                            I contributed to a persona-based chatbot by focusing on two linguistically central requirements for Korean dialogue:
+                            (1) robustness to ambiguity in colloquial, non-canonical user inputs, and (2) sociolinguistic coverage across honorific/register variation.
+                        </p>
+                        <ul style="margin: 8px 0 0 18px;">
+                            <li>Built a linguistically grounded ambiguity taxonomy (e.g., ellipsis, anaphora, spacing/noise, informal variants) to standardize how ambiguous inputs are handled.</li>
+                            <li>Applied text normalization and preprocessing guided by the taxonomy to reduce interpretation noise and improve NLU robustness.</li>
+                            <li>Led annotation efforts to ensure sociolinguistic coverage (honorific levels, informal slang, code-mixing) so the system behaves consistently across styles.</li>
+                        </ul>
+                        <p style="margin-top: 10px;">
+                            <em>Key insight:</em> in Korean conversational products, performance depends not only on intent classification accuracy but also on pragmatic consistency under register shifts.
+                        </p>
                     </div>
                     <div>
-                        <span class="tech-tag">Chatbot</span>
-                        <span class="tech-tag">Data Annotation</span>
-                        <span class="tech-tag">NLP Pipeline</span>
+                        <span class="tech-tag">Ambiguity Taxonomy</span>
+                        <span class="tech-tag">Text Normalization</span>
+                        <span class="tech-tag">Sociolinguistic Variation</span>
                     </div>
                 </div>
             </section>
@@ -312,12 +341,20 @@
                         Undergraduate Research Intern @ <a href="http://dicora.kr/" target="_blank">DICORA Lab, HUFS</a> | Jan 2022 - Sep 2022
                     </div>
                     <div class="experience-desc">
-                        Participated in two research projects: (1) constructing language data for financial sentiment analysis of stock articles, and (2) generating chatbot NLU datasets for AI model training.
+                        <p>
+                            At DICORA Lab, I worked on corpus-driven projects where the main goal was to turn raw text into usable linguistic resources.
+                            I was involved in data construction, guideline iteration, and quality control across domains (finance and dialogue NLU).
+                        </p>
+                        <ul style="margin: 8px 0 0 18px;">
+                            <li>Supported corpus collection and preprocessing pipelines, emphasizing consistent unit definitions (sentence, utterance) and annotation-ready formatting.</li>
+                            <li>Assisted in annotation design and QA routines to improve label clarity and reduce ambiguity in training data.</li>
+                            <li>Helped construct NLU datasets for chatbots with attention to semantic coverage and linguistic variation.</li>
+                        </ul>
                     </div>
                     <div>
                         <span class="tech-tag">Corpus Linguistics</span>
-                        <span class="tech-tag">Sentiment Analysis</span>
-                        <span class="tech-tag">Data Construction</span>
+                        <span class="tech-tag">Annotation Design</span>
+                        <span class="tech-tag">NLU Data Curation</span>
                     </div>
                 </div>
             </section>
@@ -333,11 +370,20 @@
                         HUFS Linguistics Graduation Thesis Project | Sep 2022 - Dec 2022
                     </div>
                     <div class="experience-desc">
-                        Modeled semantic constraints between attribute nouns (e.g., interest rates, costs) and directional predicates (rise/fall) to capture context-dependent polarity shifts in financial discourse.
+                        <p>
+                            This thesis explored why sentiment in financial news cannot be captured by word lists alone.
+                            I modeled sentiment compositionally by focusing on how attribute nouns (e.g., interest rates, costs) interact with directional predicates (rise/fall),
+                            where polarity shifts depending on the semantics of the attribute.
+                        </p>
+                        <ul style="margin: 8px 0 0 18px;">
+                            <li>Designed pattern-based rules grounded in lexical semantics and compositionality (e.g., “costs rise” vs “stock prices rise”).</li>
+                            <li>Built a small, interpretable pipeline to extract attribute–predicate relations from financial text and analyzed common error patterns.</li>
+                            <li>Reflected on limitations and extensions (e.g., industry metadata, context windows) for more robust interpretation.</li>
+                        </ul>
                     </div>
                     <div>
                         <span class="tech-tag">Lexical Semantics</span>
-                        <span class="tech-tag">Corpus Linguistics</span>
+                        <span class="tech-tag">Rule-Based NLP</span>
                         <span class="tech-tag">Sentiment Analysis</span>
                     </div>
                 </div>
