@@ -207,9 +207,10 @@
         .edu-school-link:hover { color: #003399; text-decoration: underline; }
         .edu-years { font-weight: 400; color: #555; }
 
+        /* bullet을 제목의 첫 글자(텍스트 시작점)와 맞추기 */
         .edu-content ul {
-            margin: 8px 0 0 0;
-            padding-left: 0;
+            margin: 8px 0 0 0;      /* 왼쪽 여백 제거 */
+            padding-left: 0;        /* 기본 padding 제거 */
             list-style-position: inside;
         }
 
@@ -236,7 +237,7 @@
 </head>
 
 <body id="top">
-    <!-- [NEW] Top Navigation -->
+    <!-- Top Navigation -->
     <nav class="top-nav" aria-label="Table of contents">
         <div class="top-nav-inner">
             <a href="#top">Home</a>
@@ -302,6 +303,7 @@
             <section id="education">
                 <h2>Education</h2>
 
+                <!-- UW -->
                 <div class="experience-item edu-item">
                     <a class="edu-logo-link" href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
                         <img src="assets/uw.png" alt="University of Washington logo" class="edu-logo">
@@ -320,6 +322,7 @@
                     </div>
                 </div>
 
+                <!-- HUFS -->
                 <div class="experience-item edu-item">
                     <a class="edu-logo-link" href="https://www.hufs.ac.kr/hufs/index.do" target="_blank" rel="noopener noreferrer">
                         <img src="assets/hufs.png" alt="Hankuk University of Foreign Studies logo" class="edu-logo">
@@ -341,16 +344,180 @@
                 </div>
             </section>
 
+            <!-- ✅ Work Experience: 전체 복구 -->
             <section id="work">
                 <h2>Work Experience</h2>
+                
+                <!-- KETI -->
+                <div class="experience-item">
+                    <div class="experience-title">
+                        Trustworthiness Benchmarks for Korean LLMs
+                    </div>
+                    <div class="experience-meta">
+                        Researcher @ <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank" rel="noopener noreferrer">KETI</a> | Sep 2024 - Jun 2025
+                    </div>
+                    <div class="experience-desc">
+                        <p>
+                            I worked on building evaluation resources for Korean LLMs with an emphasis on linguistically grounded reliability:
+                            how models maintain grounded claims, interpret indirect meaning, and respond appropriately under pragmatic pressure.
+                            Rather than scoring only “correct/incorrect,” I focused on identifying discourse-level failure patterns and the linguistic triggers behind them.
+                        </p>
 
-                <!-- ... (너의 기존 Work Experience 내용 그대로) ... -->
+                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                        <div class="more-content" hidden>
+                            <ul style="margin: 8px 0 0 18px;">
+                                <li>Designed prompt suites and rubric-based evaluations for groundedness/hallucination, with failure-mode categories tied to discourse phenomena (e.g., attribution, consistency, hedging).</li>
+                                <li>Developed annotation guidelines to assess socio-cultural bias and pragmatic harm, emphasizing appropriateness in Korean register and stance.</li>
+                                <li>Validated a Korean multimodal dialogue dataset by aligning utterance-level pragmatic functions (e.g., agreement, refusal, hesitation) with nonverbal cue labels.</li>
+                            </ul>
+                            <p style="margin-top: 10px;">
+                                <em>Key insight:</em> many reliability issues are not isolated “wrong facts,” but emerge from how meaning is constructed across turns (implicature, underspecification, and discourse coherence).
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="tech-tag">Discourse Evaluation</span>
+                        <span class="tech-tag">Pragmatics</span>
+                        <span class="tech-tag">Failure-Mode Analysis</span>
+                    </div>
+                </div>
+
+                <!-- NCSOFT -->
+                <div class="experience-item">
+                    <div class="experience-title">
+                        AI Red Teaming & Safety Protocols
+                    </div>
+                    <div class="experience-meta">
+                        Language AI Researcher @ <a href="https://nc-ai.com/en" target="_blank" rel="noopener noreferrer">NCSOFT</a> | Mar 2024 - Sep 2024
+                    </div>
+                    <div class="experience-desc">
+                        <p>
+                            I supported safety-focused evaluation for conversational AI by building test cases that treat risk as a linguistic and interactional phenomenon.
+                            In addition to single-turn risk detection, I evaluated context-aware harmfulness in multi-turn settings where intent becomes clearer through discourse trajectories.
+                        </p>
+
+                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                        <div class="more-content" hidden>
+                            <ul style="margin: 8px 0 0 18px;">
+                                <li>Created semantics-informed risk probes for single-turn inputs, including cases where meaning depends on polysemy or indirect phrasing.</li>
+                                <li>Developed multi-turn scenarios to capture escalation patterns (justification → concretization → actionable request) and measured how risk accumulates over dialogue context.</li>
+                                <li>Analyzed evasion behaviors after refusals (repair/paraphrase, euphemisms), and incorporated these patterns into testing protocols.</li>
+                            </ul>
+                            <p style="margin-top: 10px;">
+                                <em>Key insight:</em> risk is often discourse-driven—what looks harmless in isolation can become unsafe when reference resolution, implicature, and turn-by-turn intent shifts are taken into account.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="tech-tag">Semantic Risk Signals</span>
+                        <span class="tech-tag">Context-Aware Safety</span>
+                        <span class="tech-tag">Conversation Analysis</span>
+                    </div>
+                </div>
+
+                <!-- SKT -->
+                <div class="experience-item">
+                    <div class="experience-title">
+                        Persona-based Chatbot "Haru"
+                    </div>
+                    <div class="experience-meta">
+                        Linguistic Annotator @ <a href="https://www.sktelecom.com/index_en.html" target="_blank" rel="noopener noreferrer">SK Telecom</a> | Feb 2023 - Jun 2023
+                    </div>
+                    <div class="experience-desc">
+                        <p>
+                            I contributed to a persona-based chatbot by focusing on two linguistically central requirements for Korean dialogue:
+                            (1) robustness to ambiguity in colloquial, non-canonical user inputs, and (2) sociolinguistic coverage across honorific/register variation.
+                        </p>
+
+                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                        <div class="more-content" hidden>
+                            <ul style="margin: 8px 0 0 18px;">
+                                <li>Built a linguistically grounded ambiguity taxonomy (e.g., ellipsis, anaphora, spacing/noise, informal variants) to standardize how ambiguous inputs are handled.</li>
+                                <li>Applied text normalization and preprocessing guided by the taxonomy to reduce interpretation noise and improve NLU robustness.</li>
+                                <li>Led annotation efforts to ensure sociolinguistic coverage (honorific levels, informal slang, code-mixing) so the system behaves consistently across styles.</li>
+                            </ul>
+                            <p style="margin-top: 10px;">
+                                <em>Key insight:</em> in Korean conversational products, performance depends not only on intent classification accuracy but also on pragmatic consistency under register shifts.
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="tech-tag">Ambiguity Taxonomy</span>
+                        <span class="tech-tag">Text Normalization</span>
+                        <span class="tech-tag">Sociolinguistic Variation</span>
+                    </div>
+                </div>
             </section>
 
+            <section id="research">
+                <h2>Research Experience</h2>
+
+                <!-- DICORA -->
+                <div class="experience-item">
+                    <div class="experience-title">
+                        Corpus Study for Sentiment Analysis & Chatbot NLU
+                    </div>
+                    <div class="experience-meta">
+                        Undergraduate Research Intern @ <a href="http://dicora.kr/" target="_blank" rel="noopener noreferrer">DICORA Lab, HUFS</a> | Jan 2022 - Sep 2022
+                    </div>
+                    <div class="experience-desc">
+                        <p>
+                            At DICORA Lab, I worked on corpus-driven projects where the main goal was to turn raw text into usable linguistic resources.
+                            I was involved in data construction, guideline iteration, and quality control across domains (finance and dialogue NLU).
+                        </p>
+
+                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                        <div class="more-content" hidden>
+                            <ul style="margin: 8px 0 0 18px;">
+                                <li>Supported corpus collection and preprocessing pipelines, emphasizing consistent unit definitions (sentence, utterance) and annotation-ready formatting.</li>
+                                <li>Assisted in annotation design and QA routines to improve label clarity and reduce ambiguity in training data.</li>
+                                <li>Helped construct NLU datasets for chatbots with attention to semantic coverage and linguistic variation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="tech-tag">Corpus Linguistics</span>
+                        <span class="tech-tag">Annotation Design</span>
+                        <span class="tech-tag">NLU Data Curation</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ✅ Personal Project: 전체 복구 -->
             <section id="projects">
                 <h2>Personal Project</h2>
 
-                <!-- ... (너의 기존 Personal Project 내용 그대로) ... -->
+                <!-- Thesis Project -->
+                <div class="experience-item">
+                    <div class="experience-title">
+                        Linguistic Pattern Analysis for Financial Sentiment
+                    </div>
+                    <div class="experience-meta">
+                        HUFS Linguistics Graduation Thesis Project | Sep 2022 - Dec 2022
+                    </div>
+                    <div class="experience-desc">
+                        <p>
+                            This thesis explored why sentiment in financial news cannot be captured by word lists alone.
+                            I modeled sentiment compositionally by focusing on how attribute nouns (e.g., interest rates, costs) interact with directional predicates (rise/fall),
+                            where polarity shifts depending on the semantics of the attribute.
+                        </p>
+
+                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                        <div class="more-content" hidden>
+                            <ul style="margin: 8px 0 0 18px;">
+                                <li>Designed pattern-based rules grounded in lexical semantics and compositionality (e.g., “costs rise” vs “stock prices rise”).</li>
+                                <li>Built a small, interpretable pipeline to extract attribute–predicate relations from financial text and analyzed common error patterns.</li>
+                                <li>Reflected on limitations and extensions (e.g., industry metadata, context windows) for more robust interpretation.</li>
+                                <li>Recognized with the Outstanding Undergraduate Thesis Award.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="tech-tag">Lexical Semantics</span>
+                        <span class="tech-tag">Rule-Based NLP</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
