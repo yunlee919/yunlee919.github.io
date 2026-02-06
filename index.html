@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     
     <style>
-        /* [1. 기본 설정: 폰트 및 전체 레이아웃] */
-        html { scroll-behavior: smooth; } /* [NEW] 부드러운 스크롤 */
+        /* [1. 기본 설정] */
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -22,7 +22,6 @@
             font-size: 15px;
         }
 
-        /* 링크 스타일 */
         a {
             color: #0066cc;
             text-decoration: none;
@@ -34,9 +33,9 @@
             text-decoration: underline;
         }
 
-        /* ===== [NEW] Top Navigation ===== */
+        /* [Top Navigation] */
         .top-nav {
-            position: sticky;  /* 스크롤해도 상단에 고정 */
+            position: sticky;
             top: 0;
             z-index: 1000;
             background: #fbf7f0;
@@ -53,7 +52,7 @@
         }
 
         .top-nav a {
-            color: #7a3f16;           /* 예시처럼 브라운 톤 */
+            color: #7a3f16;
             font-weight: 700;
             font-size: 1.05rem;
             text-decoration: none;
@@ -65,7 +64,6 @@
             text-decoration: none;
         }
 
-        /* 모바일에서 줄바꿈/가독성 */
         @media (max-width: 768px) {
             .top-nav-inner {
                 gap: 18px;
@@ -126,7 +124,7 @@
 
         section {
             margin-bottom: 50px;
-            scroll-margin-top: 70px; /* [NEW] 헤더 높이만큼 여유 */
+            scroll-margin-top: 70px;
         }
 
         h2 {
@@ -140,12 +138,7 @@
 
         .about-text { margin-bottom: 15px; }
 
-        /* [5. 뉴스 리스트 스타일] */
-        .news-list { list-style: none; padding: 0; }
-        .news-list li { margin-bottom: 10px; font-size: 0.95rem; }
-        .news-date { font-weight: bold; color: #444; margin-right: 10px; }
-
-        /* [6. 경력 아이템 스타일] */
+        /* [Experience Items] */
         .experience-item { margin-bottom: 30px; }
         .experience-title { font-size: 1.1rem; font-weight: 700; color: #111; margin-bottom: 4px; }
         .experience-meta { font-size: 0.9rem; color: #555; margin-bottom: 8px; font-style: italic; }
@@ -173,71 +166,52 @@
             cursor: pointer;
             font-size: 0.9rem;
         }
+        .toggle-more:hover { color: #003399; text-decoration: underline; }
 
-        .toggle-more:hover {
-            color: #003399;
-            text-decoration: underline;
-        }
-
-        /* ====== Education layout ====== */
+        /* [Education specific] */
         .edu-item { display: flex; gap: 18px; align-items: flex-start; }
-
-        .edu-logo-link {
-            display: inline-flex;
-            flex: 0 0 auto;
-            line-height: 0;
-            text-decoration: none;
-            border-radius: 10px;
-        }
-
+        .edu-logo-link { display: inline-flex; flex: 0 0 auto; line-height: 0; border-radius: 10px; }
         .edu-logo {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            border-radius: 10px;
-            background: #fbf7f0;
-            border: 1px solid rgba(0,0,0,0.06);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-            padding: 6px;
+            width: 70px; height: 70px; object-fit: contain; border-radius: 10px;
+            background: #fbf7f0; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 2px 6px rgba(0,0,0,0.06); padding: 6px;
         }
-
         .edu-content { flex: 1; min-width: 0; }
+        .edu-content ul { margin: 8px 0 0 0; padding-left: 0; list-style-position: inside; }
 
-        .edu-school-link { color: #111; text-decoration: none; }
-        .edu-school-link:hover { color: #003399; text-decoration: underline; }
-        .edu-years { font-weight: 400; color: #555; }
+        /* [News List] */
+        .news-list { list-style: none; padding: 0; }
+        .news-list li { margin-bottom: 10px; font-size: 0.95rem; }
+        .news-date { font-weight: bold; color: #444; margin-right: 10px; }
 
-        /* bullet을 제목의 첫 글자(텍스트 시작점)와 맞추기 */
-        .edu-content ul {
-            margin: 8px 0 0 0;      /* 왼쪽 여백 제거 */
-            padding-left: 0;        /* 기본 padding 제거 */
-            list-style-position: inside;
+        /* [NEW: Coursework Grid Layout] */
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2열 배치 */
+            gap: 2px 20px; /* 행 간격, 열 간격 */
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+        .course-grid li {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 4px;
         }
 
-        /* [7. 모바일 반응형] */
+        /* [Mobile] */
         @media (max-width: 768px) {
             .container { flex-direction: column; gap: 30px; }
-
-            .profile-section {
-                text-align: center;
-                border-bottom: 1px solid #e0ded5;
-                padding-bottom: 20px;
-            }
+            .profile-section { text-align: center; border-bottom: 1px solid #e0ded5; padding-bottom: 20px; }
             .profile-img { margin: 0 auto 20px auto; }
-
-            .contact-links a {
-                display: inline-block;
-                margin: 0 10px;
-                padding: 5px;
-            }
-
+            .contact-links a { display: inline-block; margin: 0 10px; padding: 5px; }
             .edu-logo { width: 62px; height: 62px; }
+            
+            /* 모바일에서는 1열로 변경 */
+            .course-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 
 <body id="top">
-    <!-- Top Navigation -->
     <nav class="top-nav" aria-label="Table of contents">
         <div class="top-nav-inner">
             <a href="#top">Home</a>
@@ -245,7 +219,7 @@
             <a href="#education">Education</a>
             <a href="#work">Experience</a>
             <a href="#projects">Project</a>
-        </div>
+            <a href="#coursework">Coursework</a> </div>
     </nav>
 
     <div class="container">
@@ -302,13 +276,10 @@
 
             <section id="education">
                 <h2>Education</h2>
-
-                <!-- UW -->
                 <div class="experience-item edu-item">
                     <a class="edu-logo-link" href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
                         <img src="assets/uw.png" alt="University of Washington logo" class="edu-logo">
                     </a>
-
                     <div class="edu-content">
                         <div class="experience-title">
                             <a class="edu-school-link" href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
@@ -321,13 +292,10 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- HUFS -->
                 <div class="experience-item edu-item">
                     <a class="edu-logo-link" href="https://www.hufs.ac.kr/hufs/index.do" target="_blank" rel="noopener noreferrer">
                         <img src="assets/hufs.png" alt="Hankuk University of Foreign Studies logo" class="edu-logo">
                     </a>
-
                     <div class="edu-content">
                         <div class="experience-title">
                             <a class="edu-school-link" href="https://www.hufs.ac.kr/hufs/index.do" target="_blank" rel="noopener noreferrer">
@@ -344,11 +312,9 @@
                 </div>
             </section>
 
-            <!-- ✅ Work Experience: 전체 복구 -->
             <section id="work">
                 <h2>Work Experience</h2>
                 
-                <!-- KETI -->
                 <div class="experience-item">
                     <div class="experience-title">
                         Trustworthiness Benchmarks for Korean LLMs
@@ -362,7 +328,6 @@
                             how models maintain grounded claims, interpret indirect meaning, and respond appropriately under pragmatic pressure.
                             Rather than scoring only “correct/incorrect,” I focused on identifying discourse-level failure patterns and the linguistic triggers behind them.
                         </p>
-
                         <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
                         <div class="more-content" hidden>
                             <ul style="margin: 8px 0 0 18px;">
@@ -382,7 +347,6 @@
                     </div>
                 </div>
 
-                <!-- NCSOFT -->
                 <div class="experience-item">
                     <div class="experience-title">
                         AI Red Teaming & Safety Protocols
@@ -395,7 +359,6 @@
                             I supported safety-focused evaluation for conversational AI by building test cases that treat risk as a linguistic and interactional phenomenon.
                             In addition to single-turn risk detection, I evaluated context-aware harmfulness in multi-turn settings where intent becomes clearer through discourse trajectories.
                         </p>
-
                         <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
                         <div class="more-content" hidden>
                             <ul style="margin: 8px 0 0 18px;">
@@ -415,7 +378,6 @@
                     </div>
                 </div>
 
-                <!-- SKT -->
                 <div class="experience-item">
                     <div class="experience-title">
                         Persona-based Chatbot "Haru"
@@ -428,7 +390,6 @@
                             I contributed to a persona-based chatbot by focusing on two linguistically central requirements for Korean dialogue:
                             (1) robustness to ambiguity in colloquial, non-canonical user inputs, and (2) sociolinguistic coverage across honorific/register variation.
                         </p>
-
                         <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
                         <div class="more-content" hidden>
                             <ul style="margin: 8px 0 0 18px;">
@@ -451,8 +412,6 @@
 
             <section id="research">
                 <h2>Research Experience</h2>
-
-                <!-- DICORA -->
                 <div class="experience-item">
                     <div class="experience-title">
                         Corpus Study for Sentiment Analysis & Chatbot NLU
@@ -465,7 +424,6 @@
                             At DICORA Lab, I worked on corpus-driven projects where the main goal was to turn raw text into usable linguistic resources.
                             I was involved in data construction, guideline iteration, and quality control across domains (finance and dialogue NLU).
                         </p>
-
                         <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
                         <div class="more-content" hidden>
                             <ul style="margin: 8px 0 0 18px;">
@@ -483,11 +441,8 @@
                 </div>
             </section>
 
-            <!-- ✅ Personal Project: 전체 복구 -->
             <section id="projects">
                 <h2>Personal Project</h2>
-
-                <!-- Thesis Project -->
                 <div class="experience-item">
                     <div class="experience-title">
                         Linguistic Pattern Analysis for Financial Sentiment
@@ -501,7 +456,6 @@
                             I modeled sentiment compositionally by focusing on how attribute nouns (e.g., interest rates, costs) interact with directional predicates (rise/fall),
                             where polarity shifts depending on the semantics of the attribute.
                         </p>
-
                         <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
                         <div class="more-content" hidden>
                             <ul style="margin: 8px 0 0 18px;">
@@ -519,6 +473,69 @@
                     </div>
                 </div>
             </section>
+
+            <section id="coursework">
+                <h2>Relevant Coursework</h2>
+
+                <div class="experience-item">
+                    <div class="experience-title">Computational Linguistics & NLP</div>
+                    <ul class="course-grid">
+                        <li>LING 570: Shallow Processing Techniques for NLP</li>
+                        <li>LING 571: Deep Processing Techniques for NLP</li>
+                        <li>LING 572: Advanced Statistical Methods in NLP</li>
+                        <li>LING 575: Data Matters (Topics in NLP)</li>
+                        <li>LING 566: Intro to Syntax for Comp. Ling.</li>
+                        <li>Machine Learning for Language Analysis</li>
+                        <li>Big Data and Sentiment Analysis</li>
+                        <li>Language Information Processing</li>
+                        <li>Natural Language Data</li>
+                        <li>Corpus Analysis and Dictionary</li>
+                        <li>Intro to Linguistics and Language Technology</li>
+                        <li>Computer and Linguistics</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Linguistics</div>
+                    <ul class="course-grid">
+                        <li>Syntactic Analysis</li>
+                        <li>Phonetics</li>
+                        <li>Pragmatics</li>
+                        <li>Language Typology</li>
+                        <li>Language and Logic</li>
+                        <li>Introduction to Linguistics</li>
+                        <li>Forensic Linguistics</li>
+                        <li>Grammar in Korean as Foreign Language</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Cognitive Science</div>
+                    <ul class="course-grid">
+                        <li>Introduction to Cognitive Science</li>
+                        <li>Cognitive Psychology</li>
+                        <li>Neurolinguistics</li>
+                        <li>Linguistics and Psychological Experiments</li>
+                        <li>Language and Human Beings</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Computer Science & Mathematics</div>
+                    <ul class="course-grid">
+                        <li>CSE 373: Data Structures and Algorithms</li>
+                        <li>Language and Database</li>
+                        <li>Programming Languages and Laboratory</li>
+                        <li>Introduction to Programming Languages</li>
+                        <li>Essential Programming for Linguistics</li>
+                        <li>Programming for Language Analysis</li>
+                        <li>Probability and Statistics</li>
+                        <li>Computer Mathematics</li>
+                        <li>Statistics for Language Analysis</li>
+                    </ul>
+                </div>
+            </section>
+
         </main>
     </div>
 
