@@ -41,18 +41,18 @@
 
 \usepackage{graphicx} % Required for including images
 
-% [색상 설정] 갈색(Saddle Brown) 정의
+% Define the saddle brown color used for section headings
 \usepackage{xcolor}
 \definecolor{darkbrown}{RGB}{139, 69, 19}
 
-% [링크 설정] 하이퍼링크 기능 추가 및 색상 설정
+% Configure hyperlink behavior and colors
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,        % 링크에 색상 입히기 (false면 박스가 생김)
-    linkcolor=darkbrown,    % 내부 링크 색상
-    filecolor=darkbrown,    % 파일 링크 색상      
-    urlcolor=black,     % 웹사이트(URL) 링크 색상
-    pdftitle={Yunwoo Lee Resume}, % PDF 파일 제목 메타데이터
+    colorlinks=true,        % Use colored links instead of link boxes
+    linkcolor=darkbrown,    % Internal link color
+    filecolor=darkbrown,    % File link color
+    urlcolor=black,         % Website URL link color
+    pdftitle={Yunwoo Lee Resume}, % PDF title metadata
 }
 
 \pagestyle{empty} % Suppress headers and footers on all pages
@@ -136,12 +136,12 @@
 \newenvironment{rSection}[1]{ % The single parameter is for the section title
 	\medskip % Vertical whitespace
 	
-	% [수정] 제목: 갈색 + 일반 굵기(Bold 해제) + 대문자 유지
+	% Style section headings in brown, regular weight, and uppercase
 	{\color{darkbrown}\MakeUppercase{#1}}
 	
 	\medskip % Vertical whitespace
 	
-	% [수정] 가로줄: 검정색 (색상 명령 없음)
+	% Keep the horizontal rule black by not applying a color command
 	\hrule 
 	
 	\begin{list}{}{ % List to indent the entire content of the section
@@ -160,7 +160,7 @@
 	\textbf{#1} \hfill {#2} % Bold company name and date to the right
 	\ifthenelse{\equal{#3}{}}{}{ % If the third parameter is empty, don't output the job title and location line
 		\\ % Job title and location on a new line
-        % [수정] \textit -> \textsl (깔끔한 기울임체 적용)
+        % Use slanted text for a cleaner italic-like style
 		\textsl{#3} \hfill \textsl{#4} 
 	}%
 	\smallskip % Vertical whitespace
