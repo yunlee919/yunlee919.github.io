@@ -1,0 +1,170 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 3.0 (December 17, 2022)
+%
+% This template originates from:
+% https://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@latextemplates.com)
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% License:
+% CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	%a4paper, % Uncomment for A4 paper size (default is US letter)
+	11pt, % Default font size, can use 10pt, 11pt or 12pt
+]{resume} % Use the resume class
+
+% in your .tex preamble (after \documentclass)
+\usepackage{tikz}
+
+\newcommand{\linkbox}[2]{%
+  \tikz[baseline=(X.base)]\node[
+    inner xsep=4pt, inner ysep=2pt,
+    rounded corners=2pt,
+    draw=cyan!70, line width=0.6pt
+  ] (X) {\href{#1}{#2}};%
+}
+
+
+%------------------------------------------------
+
+\name{Yunwoo Lee} % Your name to appear at the top
+
+% You can use the \address command up to 3 times for 3 different addresses or pieces of contact information
+% Any new lines (\\) you use in the \address commands will be converted to symbols, so each address will appear as a single line.
+\address{
+    Phone: (206)~$\cdot$~843~$\cdot$~4857 \\ 
+    Email: \href{mailto:yunu919@uw.edu}{yunu919@uw.edu} % 이메일 클릭 가능하게
+} 
+
+\address{Seattle, WA 98105}
+
+\address{
+  \linkbox{https://yunlee919.github.io/}{Website}
+  \linkbox{https://www.linkedin.com/in/yunu919/}{LinkedIn}
+}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+	
+	\textbf{University of Washington} \hfill Seattle, WA \\ 
+	\textsl{Master of Science in Computational Linguistics} \hfill
+    \textsl{Sep. 2025 -- Present}
+
+    \textbf{\href{https://www.hufs.ac.kr/hufs/index.do\#section1}{Hankuk University of Foreign Studies, HUFS}} \hfill Seoul, South Korea \\
+    \textsl{Bachelor of Arts in Linguistics \& Cognitive Science} \hfill
+    \textsl{Mar. 2018 -- Feb. 2024} \\
+	\textsl{Bachelor of Language Science in Artificial Intelligence (Double Major)}\\
+    Advisor: Jeesun Nam
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional and Research Experience}
+
+	\begin{rSubsection}{\href{https://www.keti.re.kr/eng/main/main.php}{Korea Electronics Technology Institute (KETI)}}{Seongnam, South Korea}{Researcher, Language Team - AIRC (Artificial Intelligence Research Center)}{Sep. 2024 -- Jun. 2025}
+		\item Developed trustworthiness benchmarks for Korean LLMs (hallucination, reliability, sociocultural bias) through prompt design, rubrics, and failure-mode analysis
+        \item Validated a Korean multimodal dialogue dataset by aligning utterance-level pragmatic functions with nonverbal cue labels to improve human–AI interaction robustness
+	\end{rSubsection}
+
+%------------------------------------------------
+
+	\begin{rSubsection}{\href{https://nc-ai.com/en}{NCSOFT}}{Seongnam, South Korea}{Language AI Researcher, Language Data Team}{Mar. 2024 -- Sep. 2024}
+		\item Led AI Red Team initiatives, creating robust testing protocols and diverse conversational datasets to identify and mitigate ethical and safety risks in language models
+		\item Categorized language model vulnerabilities into single-turn versus multi-turn threats by identifying discourse-level risks, including anaphoric references that are undetectable within a single turn
+	\end{rSubsection}
+
+%------------------------------------------------
+
+	\begin{rSubsection}{\href{https://www.sktelecom.com/index_en.html}{SK TELECOM}}{Seoul, South Korea}{Linguistic Annotator, AI Technology Unit}{Feb. 2023 -- Jun. 2023}
+		\item Led human-centric annotation to ensure sociolinguistic coverage (honorific levels, informal slang, code-mixing) in conversational training data
+		\item Created a linguistically grounded ambiguity taxonomy and applied it to normalize Korean queries and improve chatbot robustness
+	\end{rSubsection}
+    
+%------------------------------------------------
+
+    \begin{rSubsection}{\href{http://dicora.kr/}{DICORA Computational Linguistics Lab, HUFS}}{Seongnam, South Korea}{Undergraduate Research Intern under Prof. Jeesun Nam}{Jan. 2022 -- Sep. 2022}
+		\item Contributed to two research projects (1) constructing datasets for sentiment analysis of stock-market articles, and (2) generating NLU datasets for training a big-data-driven chatbot model 
+	\end{rSubsection}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS AND HONORS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{AWARDS AND HONORS}
+    \textbf{\href{https://linguistics.washington.edu/honors-awards#S06}{UW CLMS Scholarship}} (\$14,500) \hfill 2025 \\ 
+    \textbf{HUFS Departmental Scholarship} \hfill 2021, 2023 \\ 
+    \textbf{Outstanding Undergraduate Thesis Award} \hfill 2022 \\ 
+    \textbf{Best Composition Award} \hfill 2018 \\
+    \textbf{Student Leadership Scholarship} \hfill 2018 \\ 
+    \textbf{National Merit Scholarship} \hfill 2018 
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL PROJECT SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PERSONAL PROJECT EXPERIENCE}
+
+	\begin{rSubsection}{Linguistic Pattern Analysis for Financial Sentiment: Attribute-Verb Relationships in Stock Market Articles}{}{HUFS Linguistics Graduation Thesis Project}{Sep. 2022 -- Dec. 2022}
+		\item Modeled semantic constraints between attribute nouns (e.g., interest rates, costs) and directional predicates (rise/fall) to capture context-dependent polarity shifts in financial discourse
+		\item Recognized with the Outstanding Undergraduate Thesis Award
+	\end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	Language and TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Languages and Technical Skills}
+
+	\begin{tabular}{@{} >{\bfseries}l @{\hspace{6ex}} l @{}}
+		Programming & Python, R, C++, SQL, Java \\
+        ML/NLP & PyTorch, scikit-learn, NLTK \\
+        Tools & Git, Linux/CLI \\
+        Typesetting & \LaTeX \\
+		Languages & Korean (native), English (fluent) \\
+	\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+	%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
