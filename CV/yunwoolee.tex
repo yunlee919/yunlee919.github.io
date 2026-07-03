@@ -46,7 +46,7 @@
 % Any new lines (\\) you use in the \address commands will be converted to symbols, so each address will appear as a single line.
 \address{
     Phone: (206)~$\cdot$~843~$\cdot$~4857 \\ 
-    Email: \href{mailto:yunu919@uw.edu}{yunu919@uw.edu} % 이메일 클릭 가능하게
+    Email: \href{mailto:yunu919@uw.edu}{yunu919@uw.edu} 
 } 
 
 \address{Seattle, WA 98105}
@@ -84,7 +84,20 @@
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Professional and Research Experience}
+\begin{rSection}{Research Experience}
+	\begin{rSubsection}{\href{https://faculty.washington.edu/fxia/}{LT4CPR, UW}}{Seattle, WA}{Research Assistant, Supervisor: Prof. Fei Xia}{Jun. 2026 -- Present}
+		\item Evaluating LLM-generated situation reports (SITREPs) for crisis response through faithfulness, information coverage, and structured content alignment analysis
+        \item Developing section-level and bullet-level evaluation pipelines using ROUGE, BERTScore, and bipartite matching to compare system outputs against reference reports
+	\end{rSubsection}
+%------------------------------------------------
+
+    \begin{rSubsection}{\href{http://dicora.kr/}{DICORA Computational Linguistics Lab, HUFS}}{Seongnam, South Korea}{Undergraduate Research Intern, Supervisor: Prof. Jeesun Nam}{Jan. 2022 -- Sep. 2022}
+		\item Contributed to two research projects (1) constructing datasets for sentiment analysis of stock-market articles, and (2) generating NLU datasets for training a big-data-driven chatbot model 
+	\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Industry Experience}
 
 	\begin{rSubsection}{\href{https://www.keti.re.kr/eng/main/main.php}{Korea Electronics Technology Institute (KETI)}}{Seongnam, South Korea}{Researcher, Language Team - AIRC (Artificial Intelligence Research Center)}{Sep. 2024 -- Jun. 2025}
 		\item Developed trustworthiness benchmarks for Korean LLMs (hallucination, reliability, sociocultural bias) through prompt design, rubrics, and failure-mode analysis
@@ -104,14 +117,9 @@
 		\item Led human-centric annotation to ensure sociolinguistic coverage (honorific levels, informal slang, code-mixing) in conversational training data
 		\item Created a linguistically grounded ambiguity taxonomy and applied it to normalize Korean queries and improve chatbot robustness
 	\end{rSubsection}
-    
-%------------------------------------------------
-
-    \begin{rSubsection}{\href{http://dicora.kr/}{DICORA Computational Linguistics Lab, HUFS}}{Seongnam, South Korea}{Undergraduate Research Intern under Prof. Jeesun Nam}{Jan. 2022 -- Sep. 2022}
-		\item Contributed to two research projects (1) constructing datasets for sentiment analysis of stock-market articles, and (2) generating NLU datasets for training a big-data-driven chatbot model 
-	\end{rSubsection}
 
 \end{rSection}
+
 
 %----------------------------------------------------------------------------------------
 %	AWARDS AND HONORS SECTION
@@ -133,9 +141,9 @@
 
 
 \begin{rSection}{PROJECT EXPERIENCE}
-\begin{rSubsection}{Diagnosing Performance and Bottlenecks in Agentic Pipelines for English-to-Chinese Dialogue Summarization}{}{LING 573 Course Project, University of Washington}{Mar. 2026 -- Jun. 2026}
-\item Compared fine-tuned baselines and zero-shot agentic LLM pipelines for English-to-Chinese dialogue summarization
-\item Diagnosed Semantic pipeline bottlenecks through field-level analysis of structured meaning representations and summary quality
+    \begin{rSubsection}{Relational Grounding Failures in Zero-Shot English-to-Chinese Dialogue Summarization}{}{LING 573 Project, University of Washington}{Mar. 2026 -- Jun. 2026}
+        \item Co-developed a linguistically grounded dialogue-semantic error taxonomy to evaluate source-faithfulness in cross-lingual dialogue summarization
+        \item Diagnosed relational hallucinations in small language models through errors in speaker-role attribution, event structure, modality, and discourse outcomes
 
 \end{rSubsection}
 
