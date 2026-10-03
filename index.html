@@ -25,8 +25,9 @@
             <ul class="navigation-menu" id="navigation-menu" hidden>
                 <li><a href="#top" aria-current="page">About Me</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#awards">Awards &amp; Honors</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#awards">Awards &amp; Honors</a></li>
                 <li><a href="#coursework">Coursework &amp; Skills</a></li>
             </ul>
         </div>
@@ -267,17 +268,39 @@
                 </section>
             </section>
 
-            <section id="awards" hidden>
-                <ul class="news-list">
-                    <li><span class="news-date">2026</span> Graduate Student Conference Presentation Award, UW</li>
-                    <li><span class="news-date">2025</span> <a href="https://linguistics.washington.edu/honors-awards#S06" target="_blank" rel="noopener noreferrer">CLMS Scholarship</a>, UW ($14,500)</li>
-                    <li><span class="news-date">2023</span> Departmental Scholarship, HUFS</li>
-                    <li><span class="news-date">2022</span> Outstanding Undergraduate Thesis Award, HUFS</li>
-                    <li><span class="news-date">2021</span> Departmental Scholarship, HUFS</li>
-                    <li><span class="news-date">2018</span> Best Composition Award, HUFS</li>
-                    <li><span class="news-date">2018</span> Student Leadership Scholarship, HUFS</li>
-                    <li><span class="news-date">2018</span> National Merit Scholarship</li>
-                </ul>
+            <section id="publications" hidden>
+
+                <div class="experience-item">
+                    <div class="experience-title">
+                        [1]
+                        <a href="https://github.com/yunlee919/relational-grounding-dialogue-summarization" target="_blank" rel="noopener noreferrer">
+                            Relational Grounding Failures in Zero-Shot Cross-Lingual Dialogue Summarization with Small Language Models
+                        </a>
+                    </div>
+                    <div class="experience-meta">
+                        Accepted at <a href="https://groundlm.github.io/grouplm_emnlp2026/#home" target="_blank" rel="noopener noreferrer">GroundLM 2026</a>, an EMNLP 2026 Workshop | Aug 2026
+                    </div>
+                    <div class="experience-desc">
+                        <p>
+                            We investigate how small language models preserve dialogue meaning in zero-shot English-to-Chinese summarization.
+                            Using a Dialogue-Semantic Grounding Error Taxonomy, we show that summaries can retain relevant content while distorting speaker roles and other semantic relations, revealing faithfulness failures that reference-based metrics may obscure.
+                        </p>
+                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                        <div class="more-content" hidden>
+                            <ul style="margin: 8px 0 0 18px;">
+                                <li>Evaluated Aya Expanse 8B, Gemma 4 E4B, and Qwen 3.5 9B on a fixed 100-dialogue XSAMSum test sample, alongside a supervised mBART baseline.</li>
+                                <li>Developed a nine-label taxonomy covering six hallucination types, omissions, language or format failures, and error-free outputs.</li>
+                                <li>Speaker-role hallucination was the most frequent hallucination type across the combined SLM outputs. mBART achieved the highest ROUGE and BERTScore despite having the lowest error-free rate under the taxonomy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="tech-tag">Cross-Lingual Summarization</span>
+                        <span class="tech-tag">Relational Hallucination</span>
+                        <span class="tech-tag">Error Taxonomy</span>
+                        <span class="tech-tag">LLM Evaluation</span>
+                    </div>
+                </div>
             </section>
 
             <section id="projects" hidden>
@@ -314,40 +337,7 @@
 
                 <div class="experience-item">
                     <div class="experience-title">
-                        [2]
-                        <a href="https://github.com/yunlee919/relational-grounding-dialogue-summarization" target="_blank" rel="noopener noreferrer">
-                            Relational Grounding Failures in Zero-Shot Cross-Lingual Dialogue Summarization with Small Language Models
-                        </a>
-                    </div>
-                    <div class="experience-meta">
-                        Accepted at <a href="https://groundlm.github.io/grouplm_emnlp2026/#home" target="_blank" rel="noopener noreferrer">GroundLM 2026</a>, an EMNLP 2026 Workshop | Aug 2026
-                    </div>
-                    <div class="experience-desc">
-                        <p>
-                            Extended from our LING 573 project at the University of Washington, this work develops a dialogue-semantic grounding error taxonomy to evaluate source-faithfulness in zero-shot English-to-Chinese dialogue summarization with small language models.
-                            We diagnose relational hallucinations through errors in speaker-role attribution, event structure, circumstances, modality, and discourse outcomes.
-                        </p>
-                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
-                        <div class="more-content" hidden>
-                            <ul style="margin: 8px 0 0 18px;">
-                                <li>Evaluated English-to-Chinese dialogue summarization on XSAMSum using zero-shot pipelines with local open-weight LLMs.</li>
-                                <li>Compared Direct, Translate-then-Summarize, Summarize-then-Translate, and Semantic pipeline configurations.</li>
-                                <li>Evaluated generated Chinese summaries using ROUGE, BERTScore, and OmniScore.</li>
-                                <li>Analyzed semantic representation errors to identify information bottlenecks and model-specific failure patterns.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="tech-tag">Cross-Lingual Summarization</span>
-                        <span class="tech-tag">Relational Hallucination</span>
-                        <span class="tech-tag">Error Taxonomy</span>
-                        <span class="tech-tag">LLM Evaluation</span>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-title">
-                        [3] Linguistic Pattern Analysis for Financial Sentiment: Attribute-Verb Relationships in Stock Market Articles
+                        [2] Linguistic Pattern Analysis for Financial Sentiment: Attribute-Verb Relationships in Stock Market Articles
                     </div>
                     <div class="experience-meta">
                         HUFS Linguistics Graduation Thesis Project | Sep 2022–Dec 2022
@@ -372,6 +362,19 @@
                         <span class="tech-tag">Sentiment Analysis</span>
                     </div>
                 </div>
+            </section>
+
+            <section id="awards" hidden>
+                <ul class="news-list">
+                    <li><span class="news-date">2026</span> Graduate Student Conference Presentation Award, UW</li>
+                    <li><span class="news-date">2025</span> <a href="https://linguistics.washington.edu/honors-awards#S06" target="_blank" rel="noopener noreferrer">CLMS Scholarship</a>, UW ($14,500)</li>
+                    <li><span class="news-date">2023</span> Departmental Scholarship, HUFS</li>
+                    <li><span class="news-date">2022</span> Outstanding Undergraduate Thesis Award, HUFS</li>
+                    <li><span class="news-date">2021</span> Departmental Scholarship, HUFS</li>
+                    <li><span class="news-date">2018</span> Best Composition Award, HUFS</li>
+                    <li><span class="news-date">2018</span> Student Leadership Scholarship, HUFS</li>
+                    <li><span class="news-date">2018</span> National Merit Scholarship</li>
+                </ul>
             </section>
 
             <section id="coursework" hidden>
@@ -504,11 +507,7 @@
           mainContent.focus({ preventScroll: true });
 
           const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-          if (isHome) {
-            window.scrollTo({ top: 0, behavior });
-          } else {
-            selectedSection.scrollIntoView({ behavior, block: 'start' });
-          }
+          window.scrollTo({ top: 0, behavior });
         }
       }
 
@@ -546,6 +545,11 @@
       });
 
       window.addEventListener('hashchange', () => showView(true));
+      window.addEventListener('load', () => {
+        window.requestAnimationFrame(() => {
+          window.scrollTo({ top: 0, behavior: 'instant' });
+        });
+      }, { once: true });
       showView();
 
       document.querySelectorAll('.toggle-more').forEach((btn) => {

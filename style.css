@@ -175,7 +175,11 @@ a:hover {
 
 section {
     margin-bottom: 50px;
-    scroll-margin-top: 84px;
+    scroll-margin-top: 104px;
+}
+
+.main-content > section > :first-child {
+    margin-top: 0;
 }
 
 h2 {
