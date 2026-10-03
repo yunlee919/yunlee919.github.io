@@ -21,10 +21,11 @@
                     <path d="m6 6 12 12M6 18 18 6"></path>
                 </svg>
             </button>
+            <h1 class="current-section-label" id="current-section-heading" aria-live="polite" aria-atomic="true">About Me</h1>
             <ul class="navigation-menu" id="navigation-menu" hidden>
                 <li><a href="#top" aria-current="page">About Me</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#awards">Awards</a></li>
+                <li><a href="#awards">Awards &amp; Honors</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#coursework">Coursework &amp; Skills</a></li>
             </ul>
@@ -51,9 +52,8 @@
             </div>
         </aside>
 
-        <main class="main-content">
+        <main class="main-content" tabindex="-1" aria-labelledby="current-section-heading">
             <section id="about">
-                <h2>About Me</h2>
                 <p class="about-text">
                     I’m a Master’s student in Computational Linguistics at the
                     <a href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">University of Washington</a> in Seattle.
@@ -100,10 +100,8 @@
             </section>
 
             <section id="experience" hidden>
-                <h2>Experience</h2>
-
                 <section id="research" class="content-subsection">
-                    <h3>Research Experience</h3>
+                    <h2>Research Experience</h2>
 
                     <div class="experience-item">
                         <div class="experience-title">
@@ -161,7 +159,7 @@
                 </section>
 
                 <section id="work" class="content-subsection">
-                    <h3>Industry Experience</h3>
+                    <h2>Industry Experience</h2>
                 
                     <div class="experience-item">
                         <div class="experience-title">
@@ -258,7 +256,7 @@
                 </section>
 
                 <section id="service" class="content-subsection">
-                    <h3>Academic Service</h3>
+                    <h2>Academic Service</h2>
 
                     <div class="experience-item">
                         <div class="experience-title">Reviewer</div>
@@ -270,7 +268,6 @@
             </section>
 
             <section id="awards" hidden>
-                <h2>Awards and Honors</h2>
                 <ul class="news-list">
                     <li><span class="news-date">2026</span> UW Graduate Student Conference Presentation Award</li>
                     <li><span class="news-date">2025</span> <a href="https://linguistics.washington.edu/honors-awards#S06" target="_blank" rel="noopener noreferrer">UW CLMS Scholarship</a> ($14,500)</li>
@@ -284,7 +281,6 @@
             </section>
 
             <section id="projects" hidden>
-                <h2>Projects</h2>
 
                 <div class="experience-item">
                     <div class="experience-title">
@@ -379,10 +375,8 @@
             </section>
 
             <section id="coursework" hidden>
-                <h2>Coursework &amp; Skills</h2>
-
                 <section id="courses" class="content-subsection">
-                    <h3>Relevant Coursework</h3>
+                    <h2>Relevant Coursework</h2>
 
                     <div class="experience-item">
                         <div class="experience-title">Computational Linguistics &amp; NLP</div>
@@ -441,7 +435,7 @@
                 </section>
 
                 <section id="skills" class="content-subsection">
-                    <h3>Languages and Technical Skills</h3>
+                    <h2>Languages and Technical Skills</h2>
 
                     <div class="experience-item">
                         <ul class="course-grid">
@@ -461,8 +455,10 @@
     <script>
       const navigation = document.querySelector('.top-nav');
       const menuToggle = navigation.querySelector('.menu-toggle');
+      const currentSectionLabel = navigation.querySelector('.current-section-label');
       const menu = navigation.querySelector('.navigation-menu');
       const menuLinks = Array.from(menu.querySelectorAll('a'));
+      const mainContent = document.querySelector('.main-content');
       const sections = Array.from(document.querySelectorAll('.main-content > section'));
       const viewAliases = {
         about: 'top',
@@ -496,6 +492,7 @@
         menuLinks.forEach((link) => {
           if (link.hash === currentHash) {
             link.setAttribute('aria-current', 'page');
+            currentSectionLabel.textContent = link.textContent.trim();
           } else {
             link.removeAttribute('aria-current');
           }
@@ -504,9 +501,7 @@
         setMenuOpen(false);
 
         if (shouldFocus) {
-          const heading = (isHome ? sections[0] : selectedSection).querySelector('h2');
-          heading.setAttribute('tabindex', '-1');
-          heading.focus({ preventScroll: true });
+          mainContent.focus({ preventScroll: true });
 
           const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
           if (isHome) {
