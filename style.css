@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 body {
     font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: #fbf7f0;
@@ -32,23 +36,80 @@ a:hover {
 }
 
 .top-nav-inner {
+    position: relative;
     max-width: 960px;
     margin: 0 auto;
-    padding: 14px 20px;
+    padding: 10px 20px;
     display: flex;
-    gap: 28px;
+    justify-content: flex-end;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.top-nav a {
+.menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #e0ded5;
+    border-radius: 10px;
+    background: transparent;
+    color: #7a3f16;
+    cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle[aria-expanded="true"] {
+    background: #f0e6d8;
+    border-color: #d8cbbb;
+}
+
+.menu-toggle:focus-visible,
+.navigation-menu a:focus-visible,
+.news-scroll:focus-visible {
+    outline: 2px solid #7a3f16;
+    outline-offset: 3px;
+}
+
+.menu-close-icon,
+.menu-toggle[aria-expanded="true"] .menu-open-icon {
+    display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-close-icon {
+    display: block;
+}
+
+.navigation-menu {
+    position: absolute;
+    top: calc(100% - 2px);
+    right: 20px;
+    width: 230px;
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    background: #fffdf8;
+    border: 1px solid #e0ded5;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(73, 48, 24, 0.12);
+}
+
+.navigation-menu a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 6px;
     color: #7a3f16;
     font-weight: 700;
-    font-size: 1.02rem;
+    font-size: 0.95rem;
     text-decoration: none;
 }
 
-.top-nav a:hover {
+.navigation-menu a:hover,
+.navigation-menu a[aria-current="page"] {
+    background: #f0e6d8;
     color: #5a2d10;
     text-decoration: none;
 }
@@ -98,11 +159,12 @@ a:hover {
 
 .main-content {
     flex: 1;
+    min-width: 0;
 }
 
 section {
     margin-bottom: 50px;
-    scroll-margin-top: 92px;
+    scroll-margin-top: 84px;
 }
 
 h2 {
@@ -110,7 +172,25 @@ h2 {
     border-bottom: 2px solid #e0ded5;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    margin-top: 0;
     color: #111;
+    font-weight: 700;
+}
+
+.content-subsection {
+    margin-bottom: 40px;
+}
+
+.content-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.content-subsection > h3 {
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0ded5;
+    color: #7a3f16;
+    font-size: 1.15rem;
     font-weight: 700;
 }
 
@@ -171,56 +251,6 @@ h2 {
     text-decoration: underline;
 }
 
-.edu-item {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-}
-
-.edu-logo-link {
-    display: inline-flex;
-    flex: 0 0 auto;
-    line-height: 0;
-    border-radius: 10px;
-}
-
-.edu-logo {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-    border-radius: 10px;
-    background: #fbf7f0;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    padding: 6px;
-}
-
-.edu-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.edu-content ul {
-    margin: 8px 0 0 0;
-    padding-left: 0;
-    list-style-position: inside;
-}
-
-.edu-school-link {
-    color: #111;
-    text-decoration: none;
-}
-
-.edu-school-link:hover {
-    color: #003399;
-    text-decoration: underline;
-}
-
-.edu-years {
-    font-weight: 400;
-    color: #555;
-}
-
 .news-list {
     list-style: none;
     padding: 0;
@@ -235,6 +265,31 @@ h2 {
     font-weight: bold;
     color: #444;
     margin-right: 10px;
+}
+
+.news-scroll {
+    /* Limit the content area to three text lines. */
+    max-height: 4.8em;
+    padding: 12px 16px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: #c1b3a1 #f4efe6;
+    border: 1px solid #e0ded5;
+    border-radius: 10px;
+    background: #fffdf8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.news-scroll .news-list {
+    margin: 0;
+}
+
+.news-scroll .news-list li {
+    margin-bottom: 0;
+    font-size: inherit;
 }
 
 .course-grid {
@@ -252,14 +307,8 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    .top-nav-inner {
-        justify-content: center;
-        gap: 10px 18px;
-        padding: 11px 16px;
-    }
-
-    .top-nav a {
-        font-size: 0.95rem;
+    .navigation-menu {
+        width: min(230px, calc(100vw - 58px));
     }
 
     .container {
@@ -269,6 +318,7 @@ h2 {
     }
 
     .profile-section {
+        flex-basis: auto;
         text-align: center;
         border-bottom: 1px solid #e0ded5;
         padding-bottom: 20px;
@@ -284,23 +334,17 @@ h2 {
         padding: 5px;
     }
 
-    .edu-logo {
-        width: 62px;
-        height: 62px;
-    }
-
     .course-grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 420px) {
-    .top-nav a {
-        font-size: 0.9rem;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
+    a {
+        transition: none;
     }
 }

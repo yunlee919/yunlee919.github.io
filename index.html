@@ -13,16 +13,21 @@
 <body id="top">
     <nav class="top-nav" aria-label="Table of contents">
         <div class="top-nav-inner">
-            <a href="#top">Home</a>
-            <a href="#news">News</a>
-            <a href="#education">Education</a>
-            <a href="#research">Research</a>
-            <a href="#work">Experience</a>
-            <a href="#service">Service</a>
-            <a href="#awards">Awards</a>
-            <a href="#projects">Projects</a>
-            <a href="#coursework">Coursework</a>
-            <a href="#skills">Skills</a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation-menu">
+                <svg class="menu-open-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg class="menu-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                    <path d="m6 6 12 12M6 18 18 6"></path>
+                </svg>
+            </button>
+            <ul class="navigation-menu" id="navigation-menu" hidden>
+                <li><a href="#top" aria-current="page">About Me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#coursework">Coursework &amp; Skills</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -50,18 +55,19 @@
             <section id="about">
                 <h2>About Me</h2>
                 <p class="about-text">
-                    I’m a Master’s student in Computational Linguistics at the 
-                    <a href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">University of Washington</a> in Seattle. 
-                    I’m broadly interested in computational linguistics and NLP, especially in how linguistic structure and meaning can be modeled and used to build better language technologies.
+                    I’m a Master’s student in Computational Linguistics at the
+                    <a href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">University of Washington</a> in Seattle.
+                    My research interests lie at the intersection of linguistics and computational methods, with a particular focus on how humans and language models represent and interpret meaning.
                 </p>
                 <p class="about-text">
-                    More recently, I have become particularly interested in linguistic grounding and faithfulness in NLP: how computational models represent, preserve, or distort meaning across contexts, languages, and dialogue structure. My current work focuses on evaluating LLM outputs through linguistically informed analyses of hallucination, ambiguity, speaker roles, event structure, and discourse-level meaning.
+                    I’m especially interested in combining theoretical linguistic analysis with computational and experimental methods to study semantic representation, ambiguity, and language model behavior. My current work examines how models resolve meaning in context and how linguistic structure can help us better understand their successes and systematic failures.
+                </p>
                 <p class="about-text">
-                    I previously worked at 
-                    <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank" rel="noopener noreferrer">Korea Electronics Technology Institute(KETI)</a>, 
-                    <a href="https://nc-ai.com/en" target="_blank" rel="noopener noreferrer">NCSOFT</a>, and 
-                    <a href="https://www.sktelecom.com/index_en.html" target="_blank" rel="noopener noreferrer">SK Telecom</a>. 
-                    Those experiences made me care about how language models behave in the real world, not just how accurate they are, but how reliable and fair they can be.
+                    I previously worked at
+                    <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank" rel="noopener noreferrer">Korea Electronics Technology Institute (KETI)</a>,
+                    <a href="https://nc-ai.com/en" target="_blank" rel="noopener noreferrer">NCSOFT</a>, and
+                    <a href="https://www.sktelecom.com/index_en.html" target="_blank" rel="noopener noreferrer">SK Telecom</a>.
+                    These experiences shaped my interest in studying language models not only as computational systems, but also as objects of linguistic analysis whose behavior can reveal both the capabilities and limitations of current language technologies.
                 </p>
                 <p class="about-text">
                     I hold a B.A. in Linguistics &amp; Cognitive Science and a double major in Language Science in Artificial Intelligence from 
@@ -72,229 +78,201 @@
             </section>
 
             <section id="news">
-                <h2>News</h2>
-                <ul class="news-list">
-                    <li>
-                        <span class="news-date">Sep 06, 2026</span>
-                        Serving as a reviewer for <a href="https://vlm4rwd.github.io/" target="_blank" rel="noopener noreferrer"><strong>VLM4RWD 2026</strong></a>, a NeurIPS 2026 Workshop.
-                    </li>
-                    <li>
-                        <span class="news-date">Aug 29, 2026</span>
-                        Our paper, <a href="https://github.com/yunlee919/relational-grounding-dialogue-summarization" target="_blank" rel="noopener noreferrer"><strong>Relational Grounding Failures in Zero-Shot Cross-Lingual Dialogue Summarization with Small Language Models</strong></a>, was accepted to <a href="https://groundlm.github.io/grouplm_emnlp2026/#home" target="_blank" rel="noopener noreferrer"><strong>GroundLM 2026</strong></a>, an EMNLP 2026 Workshop.
-                    </li>
-                    <li><span class="news-date">Jun 2026</span> Started as Research Assistant at <strong>LT4CPR, UW</strong> with Prof. Fei Xia.</li>
-                    <li><span class="news-date">Sep 2025</span> Started M.S. in Computational Linguistics at <strong>University of Washington</strong>.</li>
-                </ul>
+                <h2 id="news-heading">News</h2>
+                <div class="news-scroll" tabindex="0" role="region" aria-labelledby="news-heading">
+                    <ul class="news-list">
+                        <li>
+                            <span class="news-date">Oct 2026</span>
+                            <strong>UW Graduate Student Conference Presentation Award</strong>.
+                        </li>
+                        <li>
+                            <span class="news-date">Sep 06, 2026</span>
+                            Serving as a reviewer for <a href="https://vlm4rwd.github.io/" target="_blank" rel="noopener noreferrer"><strong>VLM4RWD 2026</strong></a>, a NeurIPS 2026 Workshop.
+                        </li>
+                        <li>
+                            <span class="news-date">Aug 29, 2026</span>
+                            Our paper, <a href="https://github.com/yunlee919/relational-grounding-dialogue-summarization" target="_blank" rel="noopener noreferrer"><strong>Relational Grounding Failures in Zero-Shot Cross-Lingual Dialogue Summarization with Small Language Models</strong></a>, was accepted to <a href="https://groundlm.github.io/grouplm_emnlp2026/#home" target="_blank" rel="noopener noreferrer"><strong>GroundLM 2026</strong></a>, an EMNLP 2026 Workshop.
+                        </li>
+                        <li><span class="news-date">Jun 2026</span> Started as Research Assistant at <strong>LT4CPR, UW</strong> with Prof. Fei Xia.</li>
+                        <li><span class="news-date">Sep 2025</span> Started M.S. in Computational Linguistics at <strong>University of Washington</strong>.</li>
+                    </ul>
+                </div>
             </section>
 
-            <section id="education">
-                <h2>Education</h2>
-                <div class="experience-item edu-item">
-                    <a class="edu-logo-link" href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/uw.png" alt="University of Washington logo" class="edu-logo">
-                    </a>
-                    <div class="edu-content">
+            <section id="experience" hidden>
+                <h2>Experience</h2>
+
+                <section id="research" class="content-subsection">
+                    <h3>Research Experience</h3>
+
+                    <div class="experience-item">
                         <div class="experience-title">
-                            <a class="edu-school-link" href="https://www.washington.edu/" target="_blank" rel="noopener noreferrer">
-                                University of Washington
-                            </a>
-                            <span class="edu-years">| Sep 2025–Present</span>
+                            LLM Evaluation for Crisis Response Situation Reports
                         </div>
-                        <ul>
-                            <li>Master of Science in Computational Linguistics</li>
-                        </ul>
+                        <div class="experience-meta">
+                            Research Assistant @ <a href="https://faculty.washington.edu/fxia/" target="_blank" rel="noopener noreferrer">LT4CPR, UW</a> | Jun 2026–Present
+                        </div>
+                        <div class="experience-desc">
+                            <p>
+                                Supervisor: <a href="https://faculty.washington.edu/fxia/" target="_blank" rel="noopener noreferrer">Prof. Fei Xia</a>.
+                                I evaluate LLM-generated situation reports (SITREPs) for crisis response, focusing on faithfulness, information coverage, and structured content alignment.
+                            </p>
+                            <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                            <div class="more-content" hidden>
+                                <ul style="margin: 8px 0 0 18px;">
+                                    <li>Developing section-level and bullet-level evaluation pipelines using ROUGE, BERTScore, and bipartite matching to compare system outputs against reference reports.</li>
+                                    <li>Analyzing how well generated SITREPs preserve critical crisis information across structured report sections.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="tech-tag">LLM Evaluation</span>
+                            <span class="tech-tag">Faithfulness</span>
+                            <span class="tech-tag">Crisis Response</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="experience-item edu-item">
-                    <a class="edu-logo-link" href="https://www.hufs.ac.kr/hufs/index.do" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/hufs.png" alt="Hankuk University of Foreign Studies logo" class="edu-logo">
-                    </a>
-                    <div class="edu-content">
+                    <div class="experience-item">
                         <div class="experience-title">
-                            <a class="edu-school-link" href="https://www.hufs.ac.kr/hufs/index.do" target="_blank" rel="noopener noreferrer">
-                                Hankuk University of Foreign Studies
-                            </a>
-                            <span class="edu-years">| Mar 2018–Feb 2024</span>
+                            Corpus Study for Sentiment Analysis &amp; Chatbot NLU
                         </div>
-                        <ul>
-                            <li>Bachelor of Arts in Linguistics &amp; Cognitive Science</li>
-                            <li>Bachelor of Language Science in Artificial Intelligence (Double Major)</li>
-                            <li>Advisor: <a href="http://dicora.kr/p033-local-grammar-based-text-labeling/?ckattempt=1" target="_blank" rel="noopener noreferrer">Prof. Jeesun Nam</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="research">
-                <h2>Research Experience</h2>
-
-                <div class="experience-item">
-                    <div class="experience-title">
-                        LLM Evaluation for Crisis Response Situation Reports
-                    </div>
-                    <div class="experience-meta">
-                        Research Assistant @ <a href="https://faculty.washington.edu/fxia/" target="_blank" rel="noopener noreferrer">LT4CPR, UW</a> | Jun 2026–Present
-                    </div>
-                    <div class="experience-desc">
-                        <p>
-                            Supervisor: <a href="https://faculty.washington.edu/fxia/" target="_blank" rel="noopener noreferrer">Prof. Fei Xia</a>.
-                            I evaluate LLM-generated situation reports (SITREPs) for crisis response, focusing on faithfulness, information coverage, and structured content alignment.
-                        </p>
-                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
-                        <div class="more-content" hidden>
-                            <ul style="margin: 8px 0 0 18px;">
-                                <li>Developing section-level and bullet-level evaluation pipelines using ROUGE, BERTScore, and bipartite matching to compare system outputs against reference reports.</li>
-                                <li>Analyzing how well generated SITREPs preserve critical crisis information across structured report sections.</li>
-                            </ul>
+                        <div class="experience-meta">
+                            Undergraduate Research Intern @ <a href="http://dicora.kr/" target="_blank" rel="noopener noreferrer">DICORA Lab, HUFS</a> | Jan 2022–Sep 2022
+                        </div>
+                        <div class="experience-desc">
+                            <p>
+                                Supervisor: <a href="http://dicora.kr/p033-local-grammar-based-text-labeling/?ckattempt=1" target="_blank" rel="noopener noreferrer">Prof. Jeesun Nam</a>.
+                                I contributed to two research projects: constructing datasets for sentiment analysis of stock-market articles, and generating NLU datasets for training a big-data-driven chatbot model.
+                            </p>
+                            <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                            <div class="more-content" hidden>
+                                <ul style="margin: 8px 0 0 18px;">
+                                    <li>Supported corpus collection and preprocessing pipelines, emphasizing consistent unit definitions and annotation-ready formatting.</li>
+                                    <li>Assisted in annotation design and QA routines to improve label clarity and reduce ambiguity in training data.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="tech-tag">Corpus Linguistics</span>
+                            <span class="tech-tag">Annotation Design</span>
+                            <span class="tech-tag">NLU Data Curation</span>
                         </div>
                     </div>
-                    <div>
-                        <span class="tech-tag">LLM Evaluation</span>
-                        <span class="tech-tag">Faithfulness</span>
-                        <span class="tech-tag">Crisis Response</span>
-                    </div>
-                </div>
+                </section>
 
-                <div class="experience-item">
-                    <div class="experience-title">
-                        Corpus Study for Sentiment Analysis &amp; Chatbot NLU
-                    </div>
-                    <div class="experience-meta">
-                        Undergraduate Research Intern @ <a href="http://dicora.kr/" target="_blank" rel="noopener noreferrer">DICORA Lab, HUFS</a> | Jan 2022–Sep 2022
-                    </div>
-                    <div class="experience-desc">
-                        <p>
-                            Supervisor: <a href="http://dicora.kr/p033-local-grammar-based-text-labeling/?ckattempt=1" target="_blank" rel="noopener noreferrer">Prof. Jeesun Nam</a>.
-                            I contributed to two research projects: constructing datasets for sentiment analysis of stock-market articles, and generating NLU datasets for training a big-data-driven chatbot model.
-                        </p>
-                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
-                        <div class="more-content" hidden>
-                            <ul style="margin: 8px 0 0 18px;">
-                                <li>Supported corpus collection and preprocessing pipelines, emphasizing consistent unit definitions and annotation-ready formatting.</li>
-                                <li>Assisted in annotation design and QA routines to improve label clarity and reduce ambiguity in training data.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="tech-tag">Corpus Linguistics</span>
-                        <span class="tech-tag">Annotation Design</span>
-                        <span class="tech-tag">NLU Data Curation</span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="work">
-                <h2>Industry Experience</h2>
+                <section id="work" class="content-subsection">
+                    <h3>Industry Experience</h3>
                 
-                <div class="experience-item">
-                    <div class="experience-title">
-                        Trustworthiness Benchmarks for Korean LLMs
-                    </div>
-                    <div class="experience-meta">
-                        Researcher, Language Team – AIRC @ <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank" rel="noopener noreferrer">KETI</a> | Sep 2024–Jun 2025
-                    </div>
-                    <div class="experience-desc">
-                        <p>
-                            I developed trustworthiness benchmarks for Korean LLMs (hallucination, reliability, sociocultural bias) through prompt design, rubrics, and failure-mode analysis.
-                            I also validated a Korean multimodal dialogue dataset by aligning utterance-level pragmatic functions with nonverbal cue labels.
-                        </p>
-                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
-                        <div class="more-content" hidden>
-                            <ul style="margin: 8px 0 0 18px;">
-                                <li>Designed prompt suites and rubric-based evaluations for groundedness/hallucination, with failure-mode categories tied to discourse phenomena, such as attribution, consistency, and hedging.</li>
-                                <li>Developed annotation guidelines to assess socio-cultural bias and pragmatic harm, emphasizing appropriateness in Korean register and stance.</li>
-                                <li>Validated a Korean multimodal dialogue dataset by aligning utterance-level pragmatic functions, such as agreement, refusal, and hesitation, with nonverbal cue labels.</li>
-                            </ul>
-                            <p style="margin-top: 10px;">
-                                <em>Key insight:</em> many reliability issues are not isolated “wrong facts,” but emerge from how meaning is constructed across turns, including implicature, underspecification, and discourse coherence.
+                    <div class="experience-item">
+                        <div class="experience-title">
+                            Trustworthiness Benchmarks for Korean LLMs
+                        </div>
+                        <div class="experience-meta">
+                            Researcher, Language Team – AIRC @ <a href="https://www.keti.re.kr/eng/main/main.php" target="_blank" rel="noopener noreferrer">KETI</a> | Sep 2024–Jun 2025
+                        </div>
+                        <div class="experience-desc">
+                            <p>
+                                I developed trustworthiness benchmarks for Korean LLMs (hallucination, reliability, sociocultural bias) through prompt design, rubrics, and failure-mode analysis.
+                                I also validated a Korean multimodal dialogue dataset by aligning utterance-level pragmatic functions with nonverbal cue labels.
                             </p>
+                            <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                            <div class="more-content" hidden>
+                                <ul style="margin: 8px 0 0 18px;">
+                                    <li>Designed prompt suites and rubric-based evaluations for groundedness/hallucination, with failure-mode categories tied to discourse phenomena, such as attribution, consistency, and hedging.</li>
+                                    <li>Developed annotation guidelines to assess socio-cultural bias and pragmatic harm, emphasizing appropriateness in Korean register and stance.</li>
+                                    <li>Validated a Korean multimodal dialogue dataset by aligning utterance-level pragmatic functions, such as agreement, refusal, and hesitation, with nonverbal cue labels.</li>
+                                </ul>
+                                <p style="margin-top: 10px;">
+                                    <em>Key insight:</em> many reliability issues are not isolated “wrong facts,” but emerge from how meaning is constructed across turns, including implicature, underspecification, and discourse coherence.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="tech-tag">Discourse Evaluation</span>
+                            <span class="tech-tag">Pragmatics</span>
+                            <span class="tech-tag">Failure-Mode Analysis</span>
                         </div>
                     </div>
-                    <div>
-                        <span class="tech-tag">Discourse Evaluation</span>
-                        <span class="tech-tag">Pragmatics</span>
-                        <span class="tech-tag">Failure-Mode Analysis</span>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="experience-title">
-                        AI Red Teaming &amp; Safety Protocols
-                    </div>
-                    <div class="experience-meta">
-                        Language AI Researcher, Language Data Team @ <a href="https://nc-ai.com/en" target="_blank" rel="noopener noreferrer">NCSOFT</a> | Mar 2024–Sep 2024
-                    </div>
-                    <div class="experience-desc">
-                        <p>
-                            I led AI Red Team initiatives, creating robust testing protocols and diverse conversational datasets to identify and mitigate ethical and safety risks in language models.
-                            I categorized vulnerabilities into single-turn versus multi-turn threats, including discourse-level risks such as anaphoric references undetectable within a single turn.
-                        </p>
-                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
-                        <div class="more-content" hidden>
-                            <ul style="margin: 8px 0 0 18px;">
-                                <li>Created semantics-informed risk probes for single-turn inputs, including cases where meaning depends on polysemy or indirect phrasing.</li>
-                                <li>Developed multi-turn scenarios to capture escalation patterns, such as justification, concretization, and actionable requests, and measured how risk accumulates over dialogue context.</li>
-                                <li>Analyzed evasion behaviors after refusals, such as repair, paraphrase, and euphemisms, and incorporated these patterns into testing protocols.</li>
-                            </ul>
-                            <p style="margin-top: 10px;">
-                                <em>Key insight:</em> risk is often discourse-driven. What looks harmless in isolation can become unsafe when reference resolution, implicature, and turn-by-turn intent shifts are taken into account.
+                    <div class="experience-item">
+                        <div class="experience-title">
+                            AI Red Teaming &amp; Safety Protocols
+                        </div>
+                        <div class="experience-meta">
+                            Language AI Researcher, Language Data Team @ <a href="https://nc-ai.com/en" target="_blank" rel="noopener noreferrer">NCSOFT</a> | Mar 2024–Sep 2024
+                        </div>
+                        <div class="experience-desc">
+                            <p>
+                                I led AI Red Team initiatives, creating robust testing protocols and diverse conversational datasets to identify and mitigate ethical and safety risks in language models.
+                                I categorized vulnerabilities into single-turn versus multi-turn threats, including discourse-level risks such as anaphoric references undetectable within a single turn.
                             </p>
+                            <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                            <div class="more-content" hidden>
+                                <ul style="margin: 8px 0 0 18px;">
+                                    <li>Created semantics-informed risk probes for single-turn inputs, including cases where meaning depends on polysemy or indirect phrasing.</li>
+                                    <li>Developed multi-turn scenarios to capture escalation patterns, such as justification, concretization, and actionable requests, and measured how risk accumulates over dialogue context.</li>
+                                    <li>Analyzed evasion behaviors after refusals, such as repair, paraphrase, and euphemisms, and incorporated these patterns into testing protocols.</li>
+                                </ul>
+                                <p style="margin-top: 10px;">
+                                    <em>Key insight:</em> risk is often discourse-driven. What looks harmless in isolation can become unsafe when reference resolution, implicature, and turn-by-turn intent shifts are taken into account.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="tech-tag">Semantic Risk Signals</span>
+                            <span class="tech-tag">Context-Aware Safety</span>
+                            <span class="tech-tag">Conversation Analysis</span>
                         </div>
                     </div>
-                    <div>
-                        <span class="tech-tag">Semantic Risk Signals</span>
-                        <span class="tech-tag">Context-Aware Safety</span>
-                        <span class="tech-tag">Conversation Analysis</span>
-                    </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="experience-title">
-                        Persona-based Chatbot "Haru"
-                    </div>
-                    <div class="experience-meta">
-                        Linguistic Data Analyst, AI Technology Unit @ <a href="https://www.sktelecom.com/index_en.html" target="_blank" rel="noopener noreferrer">SK Telecom</a> | Feb 2023–Jun 2023
-                    </div>
-                    <div class="experience-desc">
-                        <p>
-                            I led human-centric annotation to ensure sociolinguistic coverage (honorific levels, informal slang, code-mixing) in conversational training data.
-                            I also created a linguistically grounded ambiguity taxonomy and applied it to normalize Korean queries and improve chatbot robustness.
-                        </p>
-                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
-                        <div class="more-content" hidden>
-                            <ul style="margin: 8px 0 0 18px;">
-                                <li>Built a linguistically grounded ambiguity taxonomy, including ellipsis, anaphora, spacing/noise, and informal variants, to standardize how ambiguous inputs are handled.</li>
-                                <li>Applied text normalization and preprocessing guided by the taxonomy to reduce interpretation noise and improve NLU robustness.</li>
-                                <li>Led annotation efforts to ensure sociolinguistic coverage, including honorific levels, informal slang, and code-mixing, so the system behaves consistently across styles.</li>
-                            </ul>
-                            <p style="margin-top: 10px;">
-                                <em>Key insight:</em> in Korean conversational products, performance depends not only on intent classification accuracy but also on pragmatic consistency under register shifts.
+                    <div class="experience-item">
+                        <div class="experience-title">
+                            Persona-based Chatbot "Haru"
+                        </div>
+                        <div class="experience-meta">
+                            Linguistic Data Analyst, AI Technology Unit @ <a href="https://www.sktelecom.com/index_en.html" target="_blank" rel="noopener noreferrer">SK Telecom</a> | Feb 2023–Jun 2023
+                        </div>
+                        <div class="experience-desc">
+                            <p>
+                                I led human-centric annotation to ensure sociolinguistic coverage (honorific levels, informal slang, code-mixing) in conversational training data.
+                                I also created a linguistically grounded ambiguity taxonomy and applied it to normalize Korean queries and improve chatbot robustness.
                             </p>
+                            <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                            <div class="more-content" hidden>
+                                <ul style="margin: 8px 0 0 18px;">
+                                    <li>Built a linguistically grounded ambiguity taxonomy, including ellipsis, anaphora, spacing/noise, and informal variants, to standardize how ambiguous inputs are handled.</li>
+                                    <li>Applied text normalization and preprocessing guided by the taxonomy to reduce interpretation noise and improve NLU robustness.</li>
+                                    <li>Led annotation efforts to ensure sociolinguistic coverage, including honorific levels, informal slang, and code-mixing, so the system behaves consistently across styles.</li>
+                                </ul>
+                                <p style="margin-top: 10px;">
+                                    <em>Key insight:</em> in Korean conversational products, performance depends not only on intent classification accuracy but also on pragmatic consistency under register shifts.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="tech-tag">Ambiguity Taxonomy</span>
+                            <span class="tech-tag">Text Normalization</span>
+                            <span class="tech-tag">Sociolinguistic Variation</span>
                         </div>
                     </div>
-                    <div>
-                        <span class="tech-tag">Ambiguity Taxonomy</span>
-                        <span class="tech-tag">Text Normalization</span>
-                        <span class="tech-tag">Sociolinguistic Variation</span>
+                </section>
+
+                <section id="service" class="content-subsection">
+                    <h3>Academic Service</h3>
+
+                    <div class="experience-item">
+                        <div class="experience-title">Reviewer</div>
+                        <div class="experience-meta">
+                            <a href="https://vlm4rwd.github.io/" target="_blank" rel="noopener noreferrer">VLM4RWD 2026</a>, 2nd Workshop on Grounded and Faithful Vision-Language Models for Real-World Deployment, NeurIPS 2026 | 2026
+                        </div>
                     </div>
-                </div>
+                </section>
             </section>
 
-            <section id="service">
-                <h2>Academic Service</h2>
-
-                <div class="experience-item">
-                    <div class="experience-title">Reviewer</div>
-                    <div class="experience-meta">
-                        <a href="https://vlm4rwd.github.io/" target="_blank" rel="noopener noreferrer">VLM4RWD 2026</a>, 2nd Workshop on Grounded and Faithful Vision-Language Models for Real-World Deployment, NeurIPS 2026 | 2026
-                    </div>
-                </div>
-            </section>
-
-            <section id="awards">
+            <section id="awards" hidden>
                 <h2>Awards and Honors</h2>
                 <ul class="news-list">
+                    <li><span class="news-date">2026</span> UW Graduate Student Conference Presentation Award</li>
                     <li><span class="news-date">2025</span> <a href="https://linguistics.washington.edu/honors-awards#S06" target="_blank" rel="noopener noreferrer">UW CLMS Scholarship</a> ($14,500)</li>
                     <li><span class="news-date">2023</span> HUFS Departmental Scholarship</li>
                     <li><span class="news-date">2021</span> HUFS Departmental Scholarship</li>
@@ -305,11 +283,42 @@
                 </ul>
             </section>
 
-            <section id="projects">
+            <section id="projects" hidden>
                 <h2>Projects</h2>
 
                 <div class="experience-item">
                     <div class="experience-title">
+                        [1] Probing Lexical Ambiguity Resolution in Language Models through Fine-Grained Semantic Relation Prediction
+                    </div>
+                    <div class="experience-meta">
+                        M.S. Thesis, University of Washington | Mar. 2026–Present
+                    </div>
+                    <div class="experience-desc">
+                        <p>
+                            My M.S. thesis investigates how language models resolve lexical ambiguity in context, using fine-grained semantic relation prediction to assess whether models track meaning beyond simple sense selection.
+                            I am developing a controlled benchmark of ambiguous nouns and verbs to examine how models relate contextually intended meanings to alternative candidate meanings.
+                        </p>
+                        <button class="toggle-more" type="button" aria-expanded="false">Read more</button>
+                        <div class="more-content" hidden>
+                            <ul style="margin: 8px 0 0 18px;">
+                                <li>Constructing benchmark items that pair an ambiguous word in context with its intended meaning, a candidate meaning, and a semantic relation label.</li>
+                                <li>Adapting relations inspired by Natural Logic for nouns and verbs: equivalence, forward entailment, reverse entailment, alternation, and independence, with opposition included for verbs.</li>
+                                <li>Designing two prompt-based evaluations: relation selection from a predefined inventory, and structured generation of intended meanings, relation labels, and explanations.</li>
+                                <li>The generation outputs will be examined for semantic hallucinations, including plausible but contextually unsupported meanings, relation labels, and explanations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="tech-tag">Lexical Ambiguity</span>
+                        <span class="tech-tag">Semantic Relations</span>
+                        <span class="tech-tag">Semantic Diagnostics</span>
+                        <span class="tech-tag">LM Evaluation</span>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">
+                        [2]
                         <a href="https://github.com/yunlee919/relational-grounding-dialogue-summarization" target="_blank" rel="noopener noreferrer">
                             Relational Grounding Failures in Zero-Shot Cross-Lingual Dialogue Summarization with Small Language Models
                         </a>
@@ -342,7 +351,7 @@
 
                 <div class="experience-item">
                     <div class="experience-title">
-                        Linguistic Pattern Analysis for Financial Sentiment: Attribute-Verb Relationships in Stock Market Articles
+                        [3] Linguistic Pattern Analysis for Financial Sentiment: Attribute-Verb Relationships in Stock Market Articles
                     </div>
                     <div class="experience-meta">
                         HUFS Linguistics Graduation Thesis Project | Sep 2022–Dec 2022
@@ -369,83 +378,181 @@
                 </div>
             </section>
 
-            <section id="coursework">
-                <h2>Relevant Coursework</h2>
+            <section id="coursework" hidden>
+                <h2>Coursework &amp; Skills</h2>
 
-                <div class="experience-item">
-                    <div class="experience-title">Computational Linguistics &amp; NLP</div>
-                    <ul class="course-grid">
-                        <li>LING 473: Basics for Computational Linguistics</li>
-                        <li>LING 566: Introduction to Syntax for Computational Linguistics</li>
-                        <li>LING 570: Shallow Processing Techniques for NLP</li>
-                        <li>LING 571: Deep Processing Techniques for NLP</li>
-                        <li>LING 572: Advanced Statistical Methods in NLP</li>
-                        <li>LING 573: NLP Systems and Applications</li>
-                        <li>LING 575: Data Matters (Topics in NLP)</li>
-                        <li>Machine Learning for Language Analysis</li>
-                        <li>Big Data and Sentiment Analysis</li>
-                        <li>Language Information Processing</li>
-                        <li>Natural Language Data</li>
-                        <li>Corpus Analysis and Dictionary</li>
-                        <li>Intro to Linguistics and Language Technology</li>
-                        <li>Computer and Linguistics</li>
-                    </ul>
-                </div>
+                <section id="courses" class="content-subsection">
+                    <h3>Relevant Coursework</h3>
 
-                <div class="experience-item">
-                    <div class="experience-title">Linguistics &amp; Cognitive Science</div>
-                    <ul class="course-grid">
-                        <li>LING 578: Semantic Theory 1</li>
-                        <li>Syntactic Analysis</li>
-                        <li>Phonetics</li>
-                        <li>Pragmatics</li>
-                        <li>Language Typology</li>
-                        <li>Language and Logic</li>
-                        <li>Introduction to Linguistics</li>
-                        <li>Forensic Linguistics</li>
-                        <li>Grammar in Korean as Foreign Language</li>
-                        <li>Introduction to Cognitive Science</li>
-                        <li>Cognitive Psychology</li>
-                        <li>Neurolinguistics</li>
-                        <li>Linguistics and Psychological Experiments</li>
-                        <li>Language and Human Beings</li>
-                    </ul>
-                </div>
+                    <div class="experience-item">
+                        <div class="experience-title">Computational Linguistics &amp; NLP</div>
+                        <ul class="course-grid">
+                            <li>LING 473: Basics for Computational Linguistics</li>
+                            <li>LING 566: Introduction to Syntax for Computational Linguistics</li>
+                            <li>LING 570: Shallow Processing Techniques for NLP</li>
+                            <li>LING 571: Deep Processing Techniques for NLP</li>
+                            <li>LING 572: Advanced Statistical Methods in NLP</li>
+                            <li>LING 573: NLP Systems and Applications</li>
+                            <li>LING 575: Data Matters (Topics in NLP)</li>
+                            <li>Machine Learning for Language Analysis</li>
+                            <li>Big Data and Sentiment Analysis</li>
+                            <li>Language Information Processing</li>
+                            <li>Natural Language Data</li>
+                            <li>Corpus Analysis and Dictionary</li>
+                            <li>Intro to Linguistics and Language Technology</li>
+                            <li>Computer and Linguistics</li>
+                        </ul>
+                    </div>
 
-                <div class="experience-item">
-                    <div class="experience-title">Computer Science &amp; Mathematics</div>
-                    <ul class="course-grid">
-                        <li>CSE 373: Data Structures and Algorithms</li>
-                        <li>Language and Database</li>
-                        <li>Programming Languages and Laboratory</li>
-                        <li>Introduction to Programming Languages</li>
-                        <li>Essential Programming for Linguistics</li>
-                        <li>Programming for Language Analysis</li>
-                        <li>Probability and Statistics</li>
-                        <li>Computer Mathematics</li>
-                        <li>Statistics for Language Analysis</li>
-                    </ul>
-                </div>
-            </section>
+                    <div class="experience-item">
+                        <div class="experience-title">Linguistics &amp; Cognitive Science</div>
+                        <ul class="course-grid">
+                            <li>LING 578: Semantic Theory 1</li>
+                            <li>Syntactic Analysis</li>
+                            <li>Phonetics</li>
+                            <li>Pragmatics</li>
+                            <li>Language Typology</li>
+                            <li>Language and Logic</li>
+                            <li>Introduction to Linguistics</li>
+                            <li>Forensic Linguistics</li>
+                            <li>Grammar in Korean as Foreign Language</li>
+                            <li>Introduction to Cognitive Science</li>
+                            <li>Cognitive Psychology</li>
+                            <li>Neurolinguistics</li>
+                            <li>Linguistics and Psychological Experiments</li>
+                            <li>Language and Human Beings</li>
+                        </ul>
+                    </div>
 
-            <section id="skills">
-                <h2>Languages and Technical Skills</h2>
+                    <div class="experience-item">
+                        <div class="experience-title">Computer Science &amp; Mathematics</div>
+                        <ul class="course-grid">
+                            <li>CSE 373: Data Structures and Algorithms</li>
+                            <li>Language and Database</li>
+                            <li>Programming Languages and Laboratory</li>
+                            <li>Introduction to Programming Languages</li>
+                            <li>Essential Programming for Linguistics</li>
+                            <li>Programming for Language Analysis</li>
+                            <li>Probability and Statistics</li>
+                            <li>Computer Mathematics</li>
+                            <li>Statistics for Language Analysis</li>
+                        </ul>
+                    </div>
+                </section>
 
-                <div class="experience-item">
-                    <ul class="course-grid">
-                        <li><strong>Programming:</strong> Python, R, C++, SQL, Java</li>
-                        <li><strong>ML/NLP:</strong> PyTorch, NLTK</li>
-                        <li><strong>Tools:</strong> Git, Linux/CLI</li>
-                        <li><strong>Typesetting:</strong> LaTeX</li>
-                        <li><strong>Languages:</strong> Korean (native), English (fluent)</li>
-                    </ul>
-                </div>
+                <section id="skills" class="content-subsection">
+                    <h3>Languages and Technical Skills</h3>
+
+                    <div class="experience-item">
+                        <ul class="course-grid">
+                            <li><strong>Programming:</strong> Python, R, C++, SQL, Java</li>
+                            <li><strong>ML/NLP:</strong> PyTorch, NLTK</li>
+                            <li><strong>Tools:</strong> Git, Linux/CLI</li>
+                            <li><strong>Typesetting:</strong> LaTeX</li>
+                            <li><strong>Languages:</strong> Korean (native), English (fluent)</li>
+                        </ul>
+                    </div>
+                </section>
             </section>
 
         </main>
     </div>
 
     <script>
+      const navigation = document.querySelector('.top-nav');
+      const menuToggle = navigation.querySelector('.menu-toggle');
+      const menu = navigation.querySelector('.navigation-menu');
+      const menuLinks = Array.from(menu.querySelectorAll('a'));
+      const sections = Array.from(document.querySelectorAll('.main-content > section'));
+      const viewAliases = {
+        about: 'top',
+        news: 'top',
+        research: 'experience',
+        work: 'experience',
+        service: 'experience',
+        courses: 'coursework',
+        skills: 'coursework',
+      };
+
+      function setMenuOpen(isOpen) {
+        menu.hidden = !isOpen;
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      }
+
+      function showView(shouldFocus = false) {
+        const requestedId = window.location.hash.slice(1);
+        const viewId = viewAliases[requestedId] || requestedId;
+        const selectedSection = sections.find((section) => section.id === viewId);
+        const isHome = !selectedSection;
+        const currentHash = isHome ? '#top' : `#${selectedSection.id}`;
+
+        sections.forEach((section) => {
+          section.hidden = isHome
+            ? section.id !== 'about' && section.id !== 'news'
+            : section !== selectedSection;
+        });
+
+        menuLinks.forEach((link) => {
+          if (link.hash === currentHash) {
+            link.setAttribute('aria-current', 'page');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+
+        setMenuOpen(false);
+
+        if (shouldFocus) {
+          const heading = (isHome ? sections[0] : selectedSection).querySelector('h2');
+          heading.setAttribute('tabindex', '-1');
+          heading.focus({ preventScroll: true });
+
+          const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+          if (isHome) {
+            window.scrollTo({ top: 0, behavior });
+          } else {
+            selectedSection.scrollIntoView({ behavior, block: 'start' });
+          }
+        }
+      }
+
+      menuToggle.addEventListener('click', () => {
+        setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+
+          if (window.location.hash === link.hash) {
+            showView(true);
+          } else {
+            window.location.hash = link.hash;
+          }
+          setMenuOpen(false);
+        });
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!navigation.contains(event.target)) setMenuOpen(false);
+      });
+
+      navigation.addEventListener('focusout', (event) => {
+        if (event.relatedTarget && !navigation.contains(event.relatedTarget)) setMenuOpen(false);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !menu.hidden) {
+          setMenuOpen(false);
+          menuToggle.focus();
+        }
+      });
+
+      window.addEventListener('hashchange', () => showView(true));
+      showView();
+
       document.querySelectorAll('.toggle-more').forEach((btn) => {
         const content = btn.nextElementSibling;
         if (!content || !content.classList.contains('more-content')) return;
