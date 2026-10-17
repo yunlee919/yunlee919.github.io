@@ -283,8 +283,8 @@ h2 {
 }
 
 .news-scroll {
-    /* Limit the content area to six text lines. */
-    max-height: 9.6em;
+    /* Show up to ten text lines before scrolling. */
+    max-height: 16em;
     padding: 12px 16px;
     overflow-y: auto;
     overscroll-behavior: contain;
