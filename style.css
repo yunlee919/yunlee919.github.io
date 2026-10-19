@@ -231,6 +231,12 @@ h2 {
     font-style: italic;
 }
 
+.publication-authors {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
 .experience-desc {
     font-size: 0.95rem;
     color: #444;
