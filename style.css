@@ -237,35 +237,6 @@ h2 {
     color: #444;
 }
 
-.publication-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 12px;
-}
-
-.publication-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 5px 12px;
-    border: 1px solid #d8cbbb;
-    background: #fffdf8;
-    color: #7a3f16;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.publication-link:hover {
-    background: #f0e6d8;
-    color: #5a2d10;
-    text-decoration: none;
-}
-
-.publication-link:focus-visible {
-    outline: 2px solid #7a3f16;
-    outline-offset: 3px;
-}
-
 .experience-desc {
     font-size: 0.95rem;
     color: #444;
